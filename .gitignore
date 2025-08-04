@@ -1,0 +1,5 @@
+constants.asm
+*.obj
+*.sym
+*.smc
+*.bin
