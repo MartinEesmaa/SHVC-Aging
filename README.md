@@ -8,7 +8,16 @@ It can emulate ROM decompiled, including original to the SNES emulators, others 
 
 To see my modded rom, here is first modded based on Hey Arnold!
 
-Branch source code of heyarnold-mod-v1.00: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00) 
+Branch source code of heyarnold-mod-v1.00: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00)
+
+Mod folder is available on master branch:
+
+```
+SHVC-AGING-HA.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa (taken original)
+SHVC-AGING-HA-decompiled.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa (decompiled to mess assembly, then recompiled)
+```
+
+If you're not sure you can go pick normal modded ROM without `-decompiled` surfix name, but it's always working okay.
 
 ## Requirement
 
