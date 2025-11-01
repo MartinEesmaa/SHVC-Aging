@@ -19,6 +19,13 @@ SHVC-AGING-HA-decompiled.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa (
 
 If you're not sure you can go pick normal modded ROM without `-decompiled` surfix name, but it's always working okay.
 
+## Tests
+
+Emulators | Test successful?
+--- | --- |
+SNES9X/BSNES/HIGAN/ARES | ✅ (all tests)
+ZSNES v1.51 | ❌ (failed for HV Timer only)
+
 ## Requirement
 
 You need MAKE from GCC and also [wla-dx](https://github.com/vhelin/wla-dx) 10.0 and later to compile the decompiled assembly files.
