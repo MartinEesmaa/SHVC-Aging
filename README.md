@@ -21,13 +21,21 @@ If you're not sure you can go pick normal modded ROM without `-decompiled` surfi
 
 ## Tests
 
-Emulators | Test successful?
+Used all latest versions of SNES emulators follows:
+
+snes9x, bsnes, Higan, Ares and Mesen-S were all tests successfully to start aging test.
+
+### Failed tests
+
+Emulators | Tests
 --- | --- |
-SNES9X/BSNES/HIGAN/ARES | ✅ (all tests)
-ZSNES v1.51 | ❌ (failed for HV Timer only)
-SNES9X DOS | ❌ (failed for DMA Register, FIELD Flag, OBJ L OVER only, including APU sometimes)
-ZSNES DOS | ❌ (failed for HV Timer, FIELD Flag, OBJ L OVER and APU only)
-SMEM (via XNes) | ❌ (failed from VRAM High to FIELD Flag (exclude MPY 8x8, DEV 16/8 & DMA), the rest last ones are failed)
+ZSNES v1.51 | ❌ (HV Timer only)
+SNES9X DOS | ❌ (DMA Register, FIELD Flag, OBJ L OVER only, including APU sometimes)
+SNES9X 2002 | ❌ (FIELD Flag, OBJ L OVER and APU only)
+SNES9X 2005 | ❌ (APU only)
+ZSNES DOS | ❌ (HV Timer, FIELD Flag, OBJ L OVER and APU only)
+SMEM (via XNes) | ❌ (from VRAM High to FIELD Flag (exclude MPY 8x8, DEV 16/8 & DMA), the rest last ones are failed)
+Beetle Supafaust | ❌ (APU only)
 
 ## Requirement
 
