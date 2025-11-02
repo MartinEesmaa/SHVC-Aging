@@ -35,9 +35,10 @@ SNES9X 2002 | ❌ (FIELD Flag, OBJ L OVER and APU only)
 SNES9X 2005 | ❌ (APU only)
 ZSNES DOS | ❌ (HV Timer, FIELD Flag, OBJ L OVER and APU only)
 SMEM (via XNes) | ❌ (from VRAM High to FIELD Flag (exclude MPY 8x8, DEV 16/8 & DMA), the rest last ones are failed)
-Beetle Supafaust | ❌ (APU only)
+Beetle Supafaust | ❌ (OBJ L OVER only)
 SnesJs | ❌ (APU only)
 KSNES (C#) | ❌ (DMA only, the rest after DMA are all unknown errors and some graphics bug)
+SNEeSe | ❌ (OBJ L OVER only)
 
 ## Requirement
 
