@@ -23,7 +23,7 @@ If you're not sure you can go pick normal modded ROM without `-decompiled` surfi
 
 Used all latest versions of SNES emulators follows:
 
-snes9x, bsnes, Higan, Ares and Mesen-S were all tests successfully to start aging test.
+snes9x, bsnes, Higan, Ares, Mesen-S, jgenesis, LakeSnes and ChibiSNES were all tests successfully to start aging test.
 
 ### Failed tests
 
@@ -36,6 +36,8 @@ SNES9X 2005 | ❌ (APU only)
 ZSNES DOS | ❌ (HV Timer, FIELD Flag, OBJ L OVER and APU only)
 SMEM (via XNes) | ❌ (from VRAM High to FIELD Flag (exclude MPY 8x8, DEV 16/8 & DMA), the rest last ones are failed)
 Beetle Supafaust | ❌ (APU only)
+SnesJs | ❌ (APU only)
+KSNES (C#) | ❌ (DMA only, the rest after DMA are all unknown errors and some graphics bug)
 
 ## Requirement
 
