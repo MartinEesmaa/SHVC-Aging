@@ -25,6 +25,9 @@ Emulators | Test successful?
 --- | --- |
 SNES9X/BSNES/HIGAN/ARES | ✅ (all tests)
 ZSNES v1.51 | ❌ (failed for HV Timer only)
+SNES9X DOS | ❌ (failed for DMA Register, FIELD Flag, OBJ L OVER only, including APU sometimes)
+ZSNES DOS | ❌ (failed for HV Timer, FIELD Flag, OBJ L OVER and APU only)
+SMEM (via XNes) | ❌ (failed from VRAM High to FIELD Flag (exclude MPY 8x8, DEV 16/8 & DMA), the rest last ones are failed)
 
 ## Requirement
 
