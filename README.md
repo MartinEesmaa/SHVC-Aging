@@ -39,6 +39,9 @@ Beetle Supafaust | ❌ (OBJ L OVER only)
 SnesJs | ❌ (APU only)
 KSNES (C#) | ❌ (DMA only, the rest after DMA are all unknown errors and some graphics bug)
 SNEeSe | ❌ (OBJ L OVER only)
+Siena (Rust) | ❌ (224/239 mode only)
+FranLMSP's SNES (Rust) | ❌ (loads ROM, but no sign screen)
+SNES.net (gdkchan's VB.NET) | ❌ (224/239 mode and APU only)
 
 ## Requirement
 
