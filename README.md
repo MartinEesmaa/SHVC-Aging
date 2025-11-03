@@ -42,6 +42,7 @@ SNEeSe | ❌ (OBJ L OVER only)
 Siena (Rust) | ❌ (224/239 mode only)
 FranLMSP's SNES (Rust) | ❌ (loads ROM, but no sign screen)
 SNES.net (gdkchan's VB.NET) | ❌ (224/239 mode and APU only)
+MAME SNES | ❌ (OAM only)
 
 ## Requirement
 
