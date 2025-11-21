@@ -10,6 +10,8 @@ To see my modded rom, here is first modded based on Hey Arnold!
 
 Branch source code of heyarnold-mod-v1.00: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00)
 
+Branch source code of heyarnold-mod-v1.00.1: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00.1)
+
 Mod folder is available on master branch:
 
 ```
@@ -74,7 +76,7 @@ Used to decompile using [snes2asm](https://github.com/nathancassano/snes2asm) py
 Command:
 
 ```
-snes2asm -nl -o SHVC SHVC-AGING.scf
+snes2asm -nl -o SHVC SHVC-AGING.sfc
 ```
 
 - Martin Eesmaa
