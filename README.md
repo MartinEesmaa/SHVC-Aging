@@ -8,6 +8,8 @@ It can emulate ROM decompiled, including original to the SNES emulators, others 
 
 ![](sampleha.png)
 
+**Credit: welovebirdmom (original, wplace) & Martin Eesmaa (wplace, SNES) [2025]**
+
 ## Requirement
 
 You need MAKE from GCC and also [wla-dx](https://github.com/vhelin/wla-dx) 10.0 and later to compile the decompiled assembly files.
