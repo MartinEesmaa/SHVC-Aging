@@ -21,6 +21,14 @@ SHVC-AGING-HA-decompiled.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa (
 
 If you're not sure you can go pick normal modded ROM without `-decompiled` surfix name, but it's always working okay.
 
+## Sample screenshot
+
+![](sampleha.png)
+
+**Credit: welovebirdmom (original, wplace) & Martin Eesmaa (wplace, SNES) [2025]**
+
+***This screenshot was on branch source code of heyarnold-mod-v1.00.1.***
+
 ## Tests
 
 Used all latest versions of SNES emulators follows:
