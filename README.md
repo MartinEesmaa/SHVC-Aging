@@ -29,7 +29,7 @@ If you're not sure you can go pick normal modded ROM without `-decompiled` surfi
 
 ***This screenshot was on branch source code of heyarnold-mod-v1.00.1.***
 
-Tile set debug edit example of my mod running on Mesen2:
+Tile set debug viewer example of my mod running on Mesen2:
 
 ![](tilesets.png)
 
