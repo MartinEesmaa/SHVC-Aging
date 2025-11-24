@@ -11,7 +11,7 @@
 .SNESHEADER
   ID "\0\0\0\0"				; 1-4 letter string
 
-  NAME "\0\0\0\0\0\0\0\0\0@ \0\0@@\x08\0\0\0\0\0"  ; Program Title - can't be over 21 bytes,
+  NAME "MartinEesmaa HA! Test"  ; Program Title - can't be over 21 bytes,
   ;    "123456789012345678901"  ; use spaces for unused bytes of the name.
   SLOWROM
   LOROM
