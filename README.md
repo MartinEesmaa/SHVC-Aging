@@ -12,6 +12,14 @@ Branch source code of heyarnold-mod-v1.00: [here](https://github.com/MartinEesma
 
 Branch source code of heyarnold-mod-v1.00.1: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00.1)
 
+### Playable via online and sample video for new mod
+
+Online via itch.io and YouTube video of heyarnold-mod-v1.00.1 is here:
+
+Animation play via online: https://martineesmaa.itch.io/snsp-testsnes-hamod
+
+Video: https://www.youtube.com/watch?v=vSaBK-nt2PM
+
 Mod folder is available on master branch:
 
 ```
