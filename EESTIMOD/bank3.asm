@@ -5,22 +5,20 @@
 
 	lsr $0000.w		; 4E 00 00
 	rol $FF00.w,X		; 3E 00 FF
-	cpx #$B8.b		; E0 B8
-	ora [$A8.b]		; 07 A8
+	cpx #$07B8.w		; E0 B8 07
+	tay		; A8
 	ora ($FF.b,X)		; 01 FF
-	cpx #$B8.b		; E0 B8
-	ora [$A8.b]		; 07 A8
+	cpx #$07B8.w		; E0 B8 07
+	tay		; A8
 	cop $FF.b		; 02 FF
-	cpx #$B8.b		; E0 B8
-	ora [$A8.b]		; 07 A8
+	cpx #$07B8.w		; E0 B8 07
+	tay		; A8
 	ora $FB.b,S		; 03 FB
-	cpx #$B8.b		; E0 B8
-	cop $00.b		; 02 00
-	tsb $FF.b		; 04 FF
-	cpx #$B8.b		; E0 B8
-	cop $00.b		; 02 00
-	ora $FC.b		; 05 FC
-	sbc ($B8.b),Y		; F1 B8
+	cpx #$02B8.w		; E0 B8 02
+	brk $04.b		; 00 04
+	sbc $02B8E0.l,X		; FF E0 B8 02
+	brk $05.b		; 00 05
+	jsr ($B8F1.w,X)		; FC F1 B8
 	phd		; 0B
 	brk $06.b		; 00 06
 	sbc $0BB8F1.l,X		; FF F1 B8 0B
@@ -89,8 +87,7 @@
 	jsr $CFCD.w		; 20 CD CF
 	lda $00E8.w,X		; BD E8 00
 	eor $C8AF.w,X		; 5D AF C8
-	cpx #$D0.b		; E0 D0
-	xce		; FB
+	cpx #$FBD0.w		; E0 D0 FB
 	ldy $3A3F.w,X		; BC 3F 3A
 	ora ($A2.b),Y		; 11 A2
 	pha		; 48
@@ -267,8 +264,8 @@
 	.db $F0, $3C		; F0 3C
 	cpx $00.b		; E4 00
 	.db $10, $38		; 10 38
-	ldx #$48.b		; A2 48
-	cpx $48.b		; E4 48
+	ldx #$E448.w		; A2 48 E4
+	pha		; 48
 	sta $3F6C.w		; 8D 6C 3F
 	.db $90, $0D		; 90 0D
 	inx		; E8
@@ -438,8 +435,8 @@
 	brk $F0.b		; 00 F0
 	xce		; FB
 	ror $F813.w		; 6E 13 F8
-	ldx #$48.b		; A2 48
-	cpx $48.b		; E4 48
+	ldx #$E448.w		; A2 48 E4
+	pha		; 48
 	sta $3F6C.w		; 8D 6C 3F
 	.db $90, $0D		; 90 0D
 	inx		; E8
@@ -668,13 +665,13 @@
 	brk $01.b		; 00 01
 	cmp $D0.b,X		; D5 D0
 	cop $D4.b		; 02 D4
-	cpy #$09.b		; C0 09
-	eor [$5E.b]		; 47 5E
-	ora #$4547.w		; 09 47 45
-	sbc $80.b,X		; F5 80
-	cop $D4.b		; 02 D4
-	ldy #$F0.b		; A0 F0
-	asl $81F5.w,X		; 1E F5 81
+	cpy #$4709.w		; C0 09 47
+	lsr $4709.w,X		; 5E 09 47
+	eor $F5.b		; 45 F5
+	.db $80, $02		; 80 02
+	pei ($A0.b)		; D4 A0
+	.db $F0, $1E		; F0 1E
+	sbc $81.b,X		; F5 81
 	cop $D4.b		; 02 D4
 	lda ($F5.b,X)		; A1 F5
 	.db $90, $02		; 90 02
@@ -818,8 +815,8 @@
 	cpy $42.b		; C4 42
 	cpy $5F.b		; C4 5F
 	and $8F0D97.l,X		; 3F 97 0D 8F
-	cpy #$59.b		; C0 59
-	sta $6F5320.l		; 8F 20 53 6F
+	cpy #$8F59.w		; C0 59 8F
+	jsr $6F53.w		; 20 53 6F
 	xba		; EB
 	php		; 08
 	wai		; CB
