@@ -6,11 +6,13 @@ It can emulate ROM decompiled, including original to the SNES emulators, others 
 
 ### Modded ROM based
 
-To see my modded rom, here is first modded based on Hey Arnold!
+To see my modded roms, here they are:
 
 Branch source code of heyarnold-mod-v1.00: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00)
 
 Branch source code of heyarnold-mod-v1.00.1: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00.1)
+
+Branch source code of eestikeel-test: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/eestikeel-test)
 
 ### Playable via online and sample video for new mod
 
