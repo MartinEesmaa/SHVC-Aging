@@ -31,7 +31,15 @@ SHVC-AGING-HA-decompiled.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa (
 
 If you're not sure you can go pick normal modded ROM without `-decompiled` surfix name, but it's always working okay.
 
-## Sample screenshot
+## Sample screenshots
+
+![](sampleee.png)
+
+Here is my Estonian dub mod ROM with replacements of sprites, texts and more.
+
+**Credit: Martin Eesmaa [2026]**
+
+***This screenshot was on branch source code of eestikeel-test with bsnes HD and Widescreen Hack.***
 
 ![](sampleha.png)
 
