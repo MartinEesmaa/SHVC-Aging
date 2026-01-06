@@ -4101,160 +4101,208 @@
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
+	asl A		; 0A
+	ora $0A.b		; 05 0A
+	ora $0A.b		; 05 0A
+	ora $02.b		; 05 02
+	ora $02.b		; 05 02
+	ora ($E3.b,X)		; 01 E3
+	sbc $000000.l,X		; FF 00 00 00
 	brk $00.b		; 00 00
-	stz $33.b,X		; 74 33
-	xce		; FB
-	sty $FB.b		; 84 FB
-	tsb $FC.b		; 04 FC
-	ora $3F.b,S		; 03 3F
-	and $000000.l,X		; 3F 00 00 00
+	asl A		; 0A
+	brk $0A.b		; 00 0A
+	brk $7A.b		; 00 7A
+	brk $7A.b		; 00 7A
+	brk $FE.b		; 00 FE
+	sbc $000003.l,X		; FF 03 00 00
 	brk $00.b		; 00 00
-	brk $30.b		; 00 30
-	mvp $7B,$80		; 44 80 7B
-	brk $FB.b		; 00 FB
-	brk $FC.b		; 00 FC
-	and $00005F.l,X		; 3F 5F 00 00
-	brk $00.b		; 00 00
-	brk $00.b		; 00 00
-	ldy $7E38.w,X		; BC 38 7E
-	.db $80, $7E		; 80 7E
-	.db $80, $FC		; 80 FC
-	brk $F0.b		; 00 F0
-	inc $0000.w		; EE 00 00
+	ldy #$A040.w		; A0 40 A0
+	rti		; 40
+
+	ldy #$8040.w		; A0 40 80
+	rti		; 40
+
+	.db $80, $00		; 80 00
+	.db $80, $FE		; 80 FE
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	sec		; 38
-	sty $00.b		; 84 00
-	ror $7E00.w,X		; 7E 00 7E
-	brk $FC.b		; 00 FC
-	cpx #$00E0.w		; E0 E0 00
+	brk $A0.b		; 00 A0
+	brk $A0.b		; 00 A0
+	brk $BE.b		; 00 BE
+	brk $BE.b		; 00 BE
+	brk $FE.b		; 00 FE
+	.db $F0, $80		; F0 80
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0F.b]		; 07 0F
-	ora $3F0F0F.l		; 0F 0F 0F 3F
-	and $007F7F.l,X		; 3F 7F 7F 00
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0E.b]		; 07 0E
-	ora $3E0F0E.l		; 0F 0E 0F 3E
-	and $007F70.l,X		; 3F 70 7F 00
 	brk $00.b		; 00 00
-	brk $E0.b		; 00 E0
-	cpx #$E0E0.w		; E0 E0 E0
-	pea $FFF4.w		; F4 F4 FF
-	sbc $FEFFFF.l,X		; FF FF FF FE
-	inc $0000.w,X		; FE 00 00
 	brk $00.b		; 00 00
-	cpx #$E0E0.w		; E0 E0 E0
-	cpx #$F404.w		; E0 04 F4
-	ora $FF0FFF.l		; 0F FF 0F FF
-	asl $00FE.w		; 0E FE 00
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0F.b]		; 07 0F
-	ora $3F0F0F.l		; 0F 0F 0F 3F
-	and $007F7F.l,X		; 3F 7F 7F 00
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0E.b]		; 07 0E
-	ora $3E0F0E.l		; 0F 0E 0F 3E
-	and $007F70.l,X		; 3F 70 7F 00
+	asl $00.b		; 06 00
+	ora ($00.b),Y		; 11 00
 	brk $00.b		; 00 00
-	brk $E0.b		; 00 E0
-	cpx #$E0E0.w		; E0 E0 E0
-	pea $FFF4.w		; F4 F4 FF
-	sbc $FEFFFF.l,X		; FF FF FF FE
-	inc $0000.w,X		; FE 00 00
 	brk $00.b		; 00 00
-	cpx #$E0E0.w		; E0 E0 E0
-	cpx #$F404.w		; E0 04 F4
-	ora $FF0FFF.l		; 0F FF 0F FF
-	asl $00FE.w		; 0E FE 00
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0F.b]		; 07 0F
-	ora $3F0F0F.l		; 0F 0F 0F 3F
-	and $007F7F.l,X		; 3F 7F 7F 00
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0E.b]		; 07 0E
-	ora $3E0F0E.l		; 0F 0E 0F 3E
-	and $007F70.l,X		; 3F 70 7F 00
 	brk $00.b		; 00 00
-	brk $E0.b		; 00 E0
-	cpx #$E0E0.w		; E0 E0 E0
-	pea $FFF4.w		; F4 F4 FF
-	sbc $FEFFFF.l,X		; FF FF FF FE
-	inc $0000.w,X		; FE 00 00
 	brk $00.b		; 00 00
-	cpx #$E0E0.w		; E0 E0 E0
-	cpx #$F404.w		; E0 04 F4
-	ora $FF0FFF.l		; 0F FF 0F FF
-	asl $00FE.w		; 0E FE 00
+	ora [$00.b]		; 07 00
+	ora $000000.l,X		; 1F 00 00 00
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0F.b]		; 07 0F
-	ora $3F0F0F.l		; 0F 0F 0F 3F
-	and $007F7F.l,X		; 3F 7F 7F 00
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0E.b]		; 07 0E
-	ora $3E0F0E.l		; 0F 0E 0F 3E
-	and $007F70.l,X		; 3F 70 7F 00
+	asl $3800.w		; 0E 00 38
+	brk $C6.b		; 00 C6
+	brk $38.b		; 00 38
+	brk $86.b		; 00 86
 	brk $00.b		; 00 00
-	brk $E0.b		; 00 E0
-	cpx #$E0E0.w		; E0 E0 E0
-	pea $FFF4.w		; F4 F4 FF
-	sbc $FEFFFF.l,X		; FF FF FF FE
-	inc $0000.w,X		; FE 00 00
 	brk $00.b		; 00 00
-	cpx #$E0E0.w		; E0 E0 E0
-	cpx #$F404.w		; E0 04 F4
-	ora $FF0FFF.l		; 0F FF 0F FF
-	asl $00FE.w		; 0E FE 00
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0F.b]		; 07 0F
-	ora $3F0F0F.l		; 0F 0F 0F 3F
-	and $007F7F.l,X		; 3F 7F 7F 00
+	brk $0E.b		; 00 0E
+	brk $3E.b		; 00 3E
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
 	brk $00.b		; 00 00
-	brk $03.b		; 00 03
-	ora $07.b,S		; 03 07
-	ora [$0E.b]		; 07 0E
-	ora $3E0F0E.l		; 0F 0E 0F 3E
-	and $007F70.l,X		; 3F 70 7F 00
 	brk $00.b		; 00 00
-	brk $E0.b		; 00 E0
-	cpx #$E0E0.w		; E0 E0 E0
-	pea $FFF4.w		; F4 F4 FF
-	sbc $FEFFFF.l,X		; FF FF FF FE
-	inc $0000.w,X		; FE 00 00
 	brk $00.b		; 00 00
-	cpx #$E0E0.w		; E0 E0 E0
-	cpx #$F404.w		; E0 04 F4
-	ora $FF0FFF.l		; 0F FF 0F FF
-	asl $00FE.w		; 0E FE 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $06.b		; 00 06
+	brk $11.b		; 00 11
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $07.b		; 00 07
+	brk $1F.b		; 00 1F
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $0E.b		; 00 0E
+	brk $38.b		; 00 38
+	brk $C6.b		; 00 C6
+	brk $38.b		; 00 38
+	brk $86.b		; 00 86
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $0E.b		; 00 0E
+	brk $3E.b		; 00 3E
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $06.b		; 00 06
+	brk $11.b		; 00 11
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $07.b		; 00 07
+	brk $1F.b		; 00 1F
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $0E.b		; 00 0E
+	brk $38.b		; 00 38
+	brk $C6.b		; 00 C6
+	brk $38.b		; 00 38
+	brk $86.b		; 00 86
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $0E.b		; 00 0E
+	brk $3E.b		; 00 3E
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $06.b		; 00 06
+	brk $11.b		; 00 11
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $07.b		; 00 07
+	brk $1F.b		; 00 1F
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $0E.b		; 00 0E
+	brk $38.b		; 00 38
+	brk $C6.b		; 00 C6
+	brk $38.b		; 00 38
+	brk $86.b		; 00 86
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $0E.b		; 00 0E
+	brk $3E.b		; 00 3E
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $06.b		; 00 06
+	brk $11.b		; 00 11
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $07.b		; 00 07
+	brk $1F.b		; 00 1F
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $0E.b		; 00 0E
+	brk $38.b		; 00 38
+	brk $C6.b		; 00 C6
+	brk $38.b		; 00 38
+	brk $86.b		; 00 86
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $0E.b		; 00 0E
+	brk $3E.b		; 00 3E
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
+	brk $FE.b		; 00 FE
+	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $07.b		; 00 07
 	ora [$08.b]		; 07 08
-	ora $EC6F68.l		; 0F 68 6F EC
-	sbc $000000.l		; EF 00 00 00
+	ora $4C0F28.l		; 0F 28 0F 4C
+	ora $000000.l		; 0F 00 00 00
 	brk $00.b		; 00 00
 	brk $0F.b		; 00 0F
 	ora $101F18.l		; 0F 18 1F 10
-	ora $F07F70.l,X		; 1F 70 7F F0
-	sbc $000000.l,X		; FF 00 00 00
+	ora $F01F70.l,X		; 1F 70 1F F0
+	ora $000000.l,X		; 1F 00 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $C0.b		; 00 C0
@@ -4303,178 +4351,194 @@
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	.db $30, $3F		; 30 3F
-	jsr $1C3F.w		; 20 3F 1C
-	sbc $14.b,S		; E3 14
-	xba		; EB
-	trb $00E3.w		; 1C E3 00
+	cpy #$C0FF.w		; C0 FF C0
+	sbc $94E39C.l,X		; FF 9C E3 94
+	sbc $9C.b,S		; E3 9C
+	sbc $80.b,S		; E3 80
 	sbc $007F00.l,X		; FF 00 7F 00
-	and $2F7030.l,X		; 3F 30 70 2F
-	rts		; 60
-
-	lda $80.b,S		; A3 80
-	lda $80.b,S		; A3 80
-	lda $80.b,S		; A3 80
-	ldy $6F80.w,X		; BC 80 6F
+	and $EF00F3.l,X		; 3F F3 00 EF
+	brk $A3.b		; 00 A3
+	brk $AB.b		; 00 AB
+	php		; 08
+	lda $00.b,S		; A3 00
+	ldy $6F00.w,X		; BC 00 6F
 	brk $30.b		; 00 30
-	brk $26.b		; 00 26
-	sbc $E51A.w,Y		; F9 1A E5
-	.db $F0, $0F		; F0 0F
-	ldx $E041.w,Y		; BE 41 E0
+	brk $00.b		; 00 00
+	sbc $E0FF00.l,X		; FF 00 FF E0
+	ora $E01FA0.l,X		; 1F A0 1F E0
 	brk $0C.b		; 00 0C
 	cpx #$E00C.w		; E0 0C E0
-	tsb $20E0.w		; 0C E0 20
-	jsr $00C0.w		; 20 C0 00
-	brk $00.b		; 00 00
-	brk $00.b		; 00 00
+	tsb $26E0.w		; 0C E0 26
+	brk $DA.b		; 00 DA
+	brk $10.b		; 00 10
+	brk $5E.b		; 00 5E
+	rti		; 40
+
 	brk $1E.b		; 00 1E
 	cpx #$C012.w		; E0 12 C0
 	ora ($20.b)		; 12 20
-	ora ($7F.b)		; 12 7F
-	adc $0D3F30.l,X		; 7F 30 3F 0D
-	cop $24.b		; 02 24
+	ora ($0E.b)		; 12 0E
+	brk $00.b		; 00 00
+	and $24020D.l,X		; 3F 0D 02 24
 	tas		; 1B
 	jsr $611F.w		; 20 1F 61
-	asl $0FF0.w,X		; 1E F0 0F
-	sed		; F8
-	ora [$60.b]		; 07 60
-	adc $023F00.l,X		; 7F 00 3F 02
+	asl $6F90.w,X		; 1E 90 6F
+	dey		; 88
+	adc [$3F.b],Y		; 77 3F
+	brk $3F.b		; 00 3F
+	brk $02.b		; 00 02
 	brk $32.b		; 00 32
 	jsr $233F.w		; 20 3F 23
-	adc $90907F.l,X		; 7F 7F 90 90
+	adc $90F07F.l,X		; 7F 7F F0 90
+	sed		; F8
 	dey		; 88
-	dey		; 88
-	jsr ($0EFC.w,X)		; FC FC 0E
+	ror $0000.w,X		; 7E 00 00
 	inc $7E80.w,X		; FE 80 7E
 	.db $82, $7D, $02		; 82 7D 02
 	sbc $FE00.w,X		; FD 00 FE
 	brk $FE.b		; 00 FE
 	brk $FC.b		; 00 FC
-	tsb $00FC.w		; 0C FC 00
-	dec $6266.w		; CE 66 62
+	inc $FE00.w,X		; FE 00 FE
+	rti		; 40
+
+	ror $62.b		; 66 62
 	adc [$23.b]		; 67 23
 	cmp [$07.b]		; C7 07
 	ror $300E.w		; 6E 0E 30
 	.db $30, $F0		; 30 F0
-	.db $30, $70		; 30 70
-	adc $093F00.l,X		; 7F 00 3F 09
-	asl $2D.b		; 06 2D
+	.db $30, $0E		; 30 0E
+	brk $00.b		; 00 00
+	and $2D0609.l,X		; 3F 09 06 2D
 	ora ($20.b)		; 12 20
 	ora $001E21.l,X		; 1F 21 1E 00
-	adc $703F00.l,X		; 7F 00 3F 70
-	.db $70, $0F		; 70 0F
+	adc $3F3F00.l,X		; 7F 00 3F 3F
+	brk $3F.b		; 00 3F
 	brk $02.b		; 00 02
 	brk $32.b		; 00 32
 	jsr $233F.w		; 20 3F 23
 	and $00003F.l,X		; 3F 3F 00 00
 	brk $00.b		; 00 00
-	tsb $0EFC.w		; 0C FC 0E
+	ror $0000.w,X		; 7E 00 00
 	inc $FE00.w,X		; FE 00 FE
 	.db $82, $7D, $02		; 82 7D 02
 	sbc $FE00.w,X		; FD 00 FE
 	brk $FE.b		; 00 FE
 	brk $FC.b		; 00 FC
-	brk $0C.b		; 00 0C
-	cpy #$664E.w		; C0 4E 66
-	.db $62, $67, $23		; 62 67 23
+	inc $FE00.w,X		; FE 00 FE
+	rti		; 40
+
+	ror $62.b		; 66 62
+	adc [$23.b]		; 67 23
 	cmp [$07.b]		; C7 07
 	ror $300E.w		; 6E 0E 30
 	.db $30, $F0		; 30 F0
-	.db $30, $7F		; 30 7F
-	adc $003F30.l,X		; 7F 30 3F 00
-	cop $24.b		; 02 24
+	.db $30, $0E		; 30 0E
+	brk $00.b		; 00 00
+	and $240200.l,X		; 3F 00 02 24
 	tas		; 1B
 	jsr $211F.w		; 20 1F 21
 	asl $7F00.w,X		; 1E 00 7F
 	brk $3F.b		; 00 3F
-	.db $70, $7F		; 70 7F
-	.db $30, $3F		; 30 3F
+	and $003F00.l,X		; 3F 00 3F 00
 	ora $203200.l		; 0F 00 32 20
 	and $3F3F23.l,X		; 3F 23 3F 3F
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	jsr ($0EFC.w,X)		; FC FC 0E
+	ror $0000.w,X		; 7E 00 00
 	inc $7E00.w,X		; FE 00 7E
 	.db $82, $7D, $02		; 82 7D 02
 	sbc $FE00.w,X		; FD 00 FE
 	brk $FE.b		; 00 FE
 	brk $FC.b		; 00 FC
-	tsb $0EFC.w		; 0C FC 0E
-	inc $62E6.w		; EE E6 62
+	inc $FE00.w,X		; FE 00 FE
+	rti		; 40
+
+	inc $62.b		; E6 62
 	adc [$23.b]		; 67 23
 	cmp [$07.b]		; C7 07
 	ror $300E.w		; 6E 0E 30
 	.db $30, $F0		; 30 F0
-	.db $30, $7F		; 30 7F
-	adc $0D3F30.l,X		; 7F 30 3F 0D
-	cop $28.b		; 02 28
+	.db $30, $0E		; 30 0E
+	brk $00.b		; 00 00
+	and $28020D.l,X		; 3F 0D 02 28
 	ora [$20.b],Y		; 17 20
 	ora $001E21.l,X		; 1F 21 1E 00
-	adc $703F00.l,X		; 7F 00 3F 70
-	adc $023F00.l,X		; 7F 00 3F 02
+	adc $3F3F00.l,X		; 7F 00 3F 3F
+	brk $3F.b		; 00 3F
+	brk $02.b		; 00 02
 	brk $32.b		; 00 32
 	jsr $233F.w		; 20 3F 23
 	and $00003F.l,X		; 3F 3F 00 00
 	brk $00.b		; 00 00
-	jsr ($0EFC.w,X)		; FC FC 0E
+	ror $0000.w,X		; 7E 00 00
 	inc $7E80.w,X		; FE 80 7E
 	.db $82, $7D, $02		; 82 7D 02
 	sbc $FE00.w,X		; FD 00 FE
 	brk $FE.b		; 00 FE
 	brk $FC.b		; 00 FC
-	tsb $00FC.w		; 0C FC 00
-	inc $6266.w,X		; FE 66 62
+	inc $FE00.w,X		; FE 00 FE
+	rti		; 40
+
+	ror $62.b		; 66 62
 	adc [$23.b]		; 67 23
 	cmp [$07.b]		; C7 07
 	ror $300E.w		; 6E 0E 30
 	.db $30, $F0		; 30 F0
-	.db $30, $7F		; 30 7F
-	adc $043030.l,X		; 7F 30 30 04
-	phd		; 0B
-	and $2012.w		; 2D 12 20
+	.db $30, $0E		; 30 0E
+	brk $00.b		; 00 00
+	and $2D0B04.l,X		; 3F 04 0B 2D
+	ora ($20.b)		; 12 20
 	ora $001E21.l,X		; 1F 21 1E 00
-	adc $703F00.l,X		; 7F 00 3F 70
-	adc $02303F.l,X		; 7F 3F 30 02
+	adc $3F3F00.l,X		; 7F 00 3F 3F
+	brk $3F.b		; 00 3F
+	brk $02.b		; 00 02
 	brk $32.b		; 00 32
 	jsr $233F.w		; 20 3F 23
 	and $00003F.l,X		; 3F 3F 00 00
 	brk $00.b		; 00 00
-	jsr ($0EFC.w,X)		; FC FC 0E
-	rol $7E80.w,X		; 3E 80 7E
+	ror $0000.w,X		; 7E 00 00
+	inc $7E80.w,X		; FE 80 7E
 	.db $82, $7D, $02		; 82 7D 02
 	sbc $FE00.w,X		; FD 00 FE
 	brk $FE.b		; 00 FE
 	brk $FC.b		; 00 FC
-	tsb $CEFC.w		; 0C FC CE
-	asl $6266.w		; 0E 66 62
+	inc $FE00.w,X		; FE 00 FE
+	rti		; 40
+
+	ror $62.b		; 66 62
 	adc [$23.b]		; 67 23
 	cmp [$07.b]		; C7 07
 	ror $300E.w		; 6E 0E 30
 	.db $30, $F0		; 30 F0
-	.db $30, $74		; 30 74
-	adc [$3E.b],Y		; 77 3E
-	and $511B3B.l,X		; 3F 3B 1B 51
-	and $2F53.w,X		; 3D 53 2F
-	eor ($2D.b,S),Y		; 53 2D
-	ora $0163.w,X		; 1D 63 01
-	adc $387F78.l,X		; 7F 78 7F 38
-	and $7E3F3C.l,X		; 3F 3C 3F 7E
-	eor ($7F.b,S),Y		; 53 7F
-	adc [$7F.b],Y		; 77 7F
-	adc [$1F.b],Y		; 77 1F
-	ora $040F1F.l,X		; 1F 1F 0F 04
-	jsr ($FC04.w,X)		; FC 04 FC
+	.db $30, $24		; 30 24
+	ora [$2E.b]		; 07 2E
+	ora [$33.b]		; 07 33
+	ora $51.b,S		; 03 51
+	and $2C52.w		; 2D 52 2C
+	eor ($2C.b,S),Y		; 53 2C
+	trb $0162.w		; 1C 62 01
+	ror $0F78.w,X		; 7E 78 0F
+	sec		; 38
+	ora [$3C.b]		; 07 3C
+	and [$7E.b]		; 27 7E
+	eor $7F.b,S		; 43 7F
+	stz $7F.b,X		; 74 7F
+	ror $1F.b,X		; 76 1F
+	asl $0E1F.w,X		; 1E 1F 0E
+	tsb $FC.b		; 04 FC
+	tsb $FC.b		; 04 FC
 	asl $FE.b		; 06 FE
 	stx $7CFE.w		; 8E FE 7C
-	jmp ($C2C2.w,X)		; 7C C2 C2
-	inc $FCFE.w,X		; FE FE FC
-	jsr ($FE02.w,X)		; FC 02 FE
-	cop $FE.b		; 02 FE
+	jmp ($0040.w,X)		; 7C 40 00
+	tax		; AA
+	brk $54.b		; 00 54
+	brk $02.b		; 00 02
+	inc $FE02.w,X		; FE 02 FE
 	ora ($FF.b,X)		; 01 FF
 	ora ($FF.b,X)		; 01 FF
 	sta $FF.b,S		; 83 FF
-	inc $FEFE.w,X		; FE FE FE
-	inc $FCFC.w,X		; FE FC FC
+	inc $FE3C.w,X		; FE 3C FE
+	brk $FC.b		; 00 FC
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
@@ -4507,16 +4571,15 @@
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	brk $1F.b		; 00 1F
-	ora $0C3F00.l,X		; 1F 00 3F 0C
-	trb $7F68.w		; 1C 68 7F
-	.db $90, $7F		; 90 7F
-	ldy #$A07F.w		; A0 7F A0
-	and $001F7F.l,X		; 3F 7F 1F 00
-	ora [$07.b]		; 07 07
+	brk $00.b		; 00 00
+	ora $3F001F.l,X		; 1F 1F 00 3F
+	tsb $681C.w		; 0C 1C 68
+	ora $E03FF0.l,X		; 1F F0 3F E0
+	and $7F3FE0.l,X		; 3F E0 3F 7F
+	ora $070700.l,X		; 1F 00 07 07
 	tsb $0800.w		; 0C 00 08
-	ora [$10.b]		; 07 10
-	ora $201F20.l		; 0F 20 1F 20
+	ora [$70.b]		; 07 70
+	ora $601F60.l		; 0F 60 1F 60
 	ora $1C003F.l,X		; 1F 3F 00 1C
 	cpx #$00F8.w		; E0 F8 00
 	sed		; F8
@@ -4535,161 +4598,162 @@
 	cpy #$F008.w		; C0 08 F0
 	php		; 08
 	.db $F0, $F8		; F0 F8
-	brk $78.b		; 00 78
-	ora ($7F.b,X)		; 01 7F
-	ora [$3F.b]		; 07 3F
-	ora $0F1F1F.l		; 0F 1F 1F 0F
-	ora $1F1F1F.l		; 0F 1F 1F 1F
-	ora $491F0F.l,X		; 1F 0F 1F 49
-	lsr $4B4F.w		; 4E 4F 4B
-	.db $30, $3F		; 30 3F
+	brk $48.b		; 00 48
+	and ($48.b),Y		; 31 48
+	and [$30.b],Y		; 37 30
 	brk $1F.b		; 00 1F
-	brk $0F.b		; 00 0F
-	brk $1F.b		; 00 1F
-	brk $1F.b		; 00 1F
-	brk $1F.b		; 00 1F
+	ora $1F0000.l,X		; 1F 00 00 1F
+	ora $0F0000.l,X		; 1F 00 00 0F
+	ora $7F4E79.l,X		; 1F 79 4E 7F
+	pha		; 48
+	and $1F003F.l,X		; 3F 3F 00 1F
+	ora $1F000F.l		; 0F 0F 00 1F
+	ora $1F001F.l,X		; 1F 1F 00 1F
 	.db $10, $E8		; 10 E8
-	cpy #$F8C0.w		; C0 C0 F8
+	brk $F0.b		; 00 F0
+	brk $00.b		; 00 00
+	jsr ($00FC.w,X)		; FC FC 00
+	brk $F8.b		; 00 F8
+	jsr ($0000.w,X)		; FC 00 00
 	sed		; F8
+	jsr ($70F0.w,X)		; FC F0 70
+	.db $F0, $00		; F0 00
+	sed		; F8
+	sed		; F8
+	brk $FC.b		; 00 FC
+	jsr ($00FC.w,X)		; FC FC 00
 	jsr ($FCFC.w,X)		; FC FC FC
-	jsr ($FCF8.w,X)		; FC F8 FC
-	sed		; F8
-	jsr ($FCF8.w,X)		; FC F8 FC
-	.db $F0, $70		; F0 70
-	cpy #$00F0.w		; C0 F0 00
-	sed		; F8
-	brk $FC.b		; 00 FC
-	brk $FC.b		; 00 FC
-	brk $FC.b		; 00 FC
-	brk $FC.b		; 00 FC
 	brk $FC.b		; 00 FC
 	sei		; 78
-	ora [$FF.b]		; 07 FF
-	ora ($FB.b,X)		; 01 FB
-	ora [$FF.b]		; 07 FF
-	ora $1F0F6F.l		; 0F 6F 0F 1F
-	and $0F7F1F.l		; 2F 1F 7F 0F
-	sbc $AE7F7F.l,X		; FF 7F 7F AE
-	lda $909790.l		; AF 90 97 90
-	sta $007F70.l,X		; 9F 70 7F 00
-	and $007F00.l		; 2F 00 7F 00
-	adc $FFEE16.l,X		; 7F 16 EE FF
-	sbc $FFFF7F.l,X		; FF 7F FF FF
-	sbc $3F.b,S		; E3 3F
-	ora ($FF.b,X)		; 01 FF
-	.db $80, $FF		; 80 FF
-	.db $80, $FE		; 80 FE
-	cpy #$F6F0.w		; C0 F0 F6
-	cpx #$00FF.w		; E0 FF 00
-	sbc $32FF1C.l,X		; FF 1C FF 32
-	sbc ($41.b,S),Y		; F3 41
-	cmp ($41.b,X)		; C1 41
-	cmp ($22.b,X)		; C1 22
+	ora [$AE.b]		; 07 AE
+	eor ($90.b),Y		; 51 90
+	pla		; 68
+	sta $00606F.l,X		; 9F 6F 60 00
+	and $00600F.l,X		; 3F 0F 60 00
+	adc $7F7F8F.l,X		; 7F 8F 7F 7F
+	sbc $97FFAE.l,X		; FF AE FF 97
+	.db $F0, $9F		; F0 9F
+	adc $2F007F.l,X		; 7F 7F 00 2F
+	ora $7F007F.l,X		; 1F 7F 00 7F
+	asl $EE.b,X		; 16 EE
+	ora $0000FF.l,X		; 1F FF 00 00
+	sbc $0D33E3.l,X		; FF E3 33 0D
+	cmp ($BE.b,X)		; C1 BE
+	eor ($3E.b,X)		; 41 3E
+.INDEX 8
+	sep #$DC		; E2 DC
+	.db $F0, $F6		; F0 F6
+	cpx #$1F.b		; E0 1F
+	sbc $FF1CFF.l,X		; FF FF 1C FF
+	inc $7FF3.w,X		; FE F3 7F
+	cmp ($FF.b,X)		; C1 FF
+	cmp ($3E.b,X)		; C1 3E
 	sep #$08		; E2 08
-	ora [$07.b]		; 07 07
-	ora ($03.b,X)		; 01 03
-	ora [$3F.b]		; 07 3F
-	asl $0C6F.w		; 0E 6F 0C
-	adc $2C1F0C.l,X		; 7F 0C 1F 2C
-	ora $0F0F3F.l,X		; 1F 3F 0F 0F
-	asl $07.b		; 06 07
-	brk $0F.b		; 00 0F
-	and ($3F.b),Y		; 31 3F
-	eor ($5E.b)		; 52 5E
-	.db $62, $6E, $01		; 62 6E 01
-	and $3F00.w		; 2D 00 3F
+	ora [$06.b]		; 07 06
+	ora ($00.b,X)		; 01 00
+	brk $3F.b		; 00 3F
+	asl $0162.w		; 0E 62 01
+	ror $130D.w,X		; 7E 0D 13
+	jsr $3F1F.w		; 20 1F 3F
+	ora $06070F.l		; 0F 0F 07 06
+	ora $3F310F.l		; 0F 0F 31 3F
+	eor $6E635E.l,X		; 5F 5E 63 6E
+	ora $002D.w		; 0D 2D 00
+	and $38E810.l,X		; 3F 10 E8 38
+	sed		; F8
+	cpx #$00.b		; E0 00
+	stz $086E.w,X		; 9E 6E 08
+	.db $F0, $0E		; F0 0E
+	inc $10.b,X		; F6 10
+	cpx #$F8.b		; E0 F8
+	trb $F0F0.w		; 1C F0 F0
+	cpy #$38.b		; C0 38
+	jsr ($F0FC.w,X)		; FC FC F0
+	stz $0EFE.w,X		; 9E FE 0E
+	sed		; F8
+	asl $1CFC.w		; 0E FC 1C
+	cpx #$FC.b		; E0 FC
+	.db $10, $0F		; 10 0F
+	asl $1101.w		; 0E 01 11
+	asl $1F20.w		; 0E 20 1F
+	jsr $111F.w		; 20 1F 11
+	asl $001E.w		; 0E 1E 00
+	ora $1F1F1F.l,X		; 1F 1F 1F 1F
+	ora $111F0E.l		; 0F 0E 1F 11
+	and $203F20.l,X		; 3F 20 3F 20
+	ora $0F0F11.l,X		; 1F 11 0F 0F
+	brk $1F.b		; 00 1F
 	.db $10, $E8		; 10 E8
+	.db $70, $F0		; 70 F0
+	brk $00.b		; 00 00
+	jsr ($807C.w,X)		; FC 7C 80
+	brk $FC.b		; 00 FC
+	jsr ($0000.w,X)		; FC 00 00
+	jsr ($F0FC.w,X)		; FC FC F0
+	.db $F0, $80		; F0 80
+	.db $70, $F8		; 70 F8
 	sed		; F8
-	sed		; F8
-	jsr ($FE1C.w,X)		; FC 1C FE
-	asl $06FE.w		; 0E FE 06
-	inc $FC06.w,X		; FE 06 FC
-	tsb $1CF8.w		; 0C F8 1C
-	.db $F0, $F0		; F0 F0
-	cpy #$E0F8.w		; C0 F8 E0
-	jsr ($9E90.w,X)		; FC 90 9E
-	php		; 08
-	asl $0E08.w		; 0E 08 0E
-	.db $10, $1C		; 10 1C
-	cpx #$10FC.w		; E0 FC 10
-	ora $1F030F.l		; 0F 0F 03 1F
-	brk $3F.b		; 00 3F
-	brk $3F.b		; 00 3F
-	brk $1F.b		; 00 1F
-	brk $1F.b		; 00 1F
-	ora ($1F.b,X)		; 01 1F
-	ora $0F1F1F.l,X		; 1F 1F 1F 0F
-	ora $201111.l		; 0F 11 11 20
-	jsr $2020.w		; 20 20 20
-	ora ($11.b),Y		; 11 11
-	asl $000F.w		; 0E 0F 00
-	ora $F0E810.l,X		; 1F 10 E8 F0
-	.db $F0, $F8		; F0 F8
-	sed		; F8
-	jsr ($FC7C.w,X)		; FC 7C FC
-	jmp ($FCFC.w,X)		; 7C FC FC
+	.db $80, $FC		; 80 FC
+	jsr ($00FC.w,X)		; FC FC 00
 	jsr ($FCFC.w,X)		; FC FC FC
-	jsr ($F0F0.w,X)		; FC F0 F0
-	.db $80, $F0		; 80 F0
-	brk $F8.b		; 00 F8
-	.db $80, $FC		; 80 FC
-	.db $80, $FC		; 80 FC
-	brk $FC.b		; 00 FC
-	brk $FC.b		; 00 FC
 	brk $FC.b		; 00 FC
 	clc		; 18
-	ora [$17.b],Y		; 17 17
-	ora $1F1F0E.l,X		; 1F 0E 1F 1F
-	and $3F3F1F.l,X		; 3F 1F 3F 3F
-	and $1F3F3F.l,X		; 3F 3F 3F 1F
+	ora [$10.b],Y		; 17 10
+	ora $1F0000.l,X		; 1F 00 00 1F
+	and $3F0000.l,X		; 3F 00 00 3F
+	and $1F0000.l,X		; 3F 00 00 1F
 	adc $071F0F.l,X		; 7F 0F 1F 07
-	ora $001F00.l,X		; 1F 00 1F 00
-	and $003F00.l,X		; 3F 00 3F 00
-	and $003F00.l,X		; 3F 00 3F 00
-	ora $FEFE1E.l,X		; 1F 1E FE FE
+	clc		; 18
+	ora $3F001F.l,X		; 1F 1F 00 3F
+	and $3F003F.l,X		; 3F 3F 00 3F
+	and $1F003F.l,X		; 3F 3F 00 1F
+	asl $3EFE.w,X		; 1E FE 3E
 .ACCU 8
 .INDEX 8
-	sep #$7E		; E2 7E
-	cpy #$FF.b		; C0 FF
-	.db $80, $FF		; 80 FF
-	.db $80, $FE		; 80 FE
-	cpy #$FC.b		; C0 FC
-	cpx #$F0.b		; E0 F0
-	jsr ($FEE0.w,X)		; FC E0 FE
-	cmp $33FF.w,X		; DD FF 33
-	sbc ($41.b,S),Y		; F3 41
-	cmp ($41.b,X)		; C1 41
-	cmp ($22.b,X)		; C1 22
+	sep #$32		; E2 32
+	tsb $BEC1.w		; 0C C1 BE
+	eor ($3E.b,X)		; 41 3E
 .INDEX 8
-	sep #$1C		; E2 1C
+	sep #$DC		; E2 DC
+	trb $F000.w		; 1C 00 F0
+	jsr ($FEE0.w,X)		; FC E0 FE
+	cmp $FF3F.w,X		; DD 3F FF
+	sbc ($7F.b,S),Y		; F3 7F
+	cmp ($FF.b,X)		; C1 FF
+	cmp ($3E.b,X)		; C1 3E
+.ACCU 8
+.INDEX 8
+	sep #$FC		; E2 FC
 	jsr ($FC00.w,X)		; FC 00 FC
-	sbc [$1B.b]		; E7 1B
-	jsr ($FF0F.w,X)		; FC 0F FF
-	and $FF3FFF.l,X		; 3F FF 3F FF
-	sbc $7CFFFF.l,X		; FF FF FF 7C
-	adc $3938.w,X		; 7D 38 39
-	lda $8F80BF.l,X		; BF BF 80 8F
-	.db $80, $BF		; 80 BF
-	cpy #$FF.b		; C0 FF
-	brk $FF.b		; 00 FF
-	brk $FF.b		; 00 FF
-	cop $7F.b		; 02 7F
-	asl $3F.b		; 06 3F
-	.db $F0, $F0		; F0 F0
+	ldx $58.b		; A6 58
+	sty $807F.w		; 8C 7F 80
+	rti		; 40
+
+	.db $F0, $30		; F0 30
+	brk $00.b		; 00 00
+	sbc $0000FF.l,X		; FF FF 00 00
+	sec		; 38
+	and $BCFF.w,Y		; 39 FF BC
+	.db $F0, $8F		; F0 8F
+	sbc $FFCFBF.l,X		; FF BF CF FF
+	sbc $FF00FF.l,X		; FF FF 00 FF
+	adc $3F067F.l,X		; 7F 7F 06 3F
+	ldy #$00.b		; A0 00
 	sed		; F8
 	sed		; F8
-	.db $F0, $F8		; F0 F8
-	.db $80, $84		; 80 84
-	.db $80, $9C		; 80 9C
+	brk $00.b		; 00 00
+	brk $04.b		; 00 04
+	brk $00.b		; 00 00
 	brk $02.b		; 00 02
-	brk $F2.b		; 00 F2
+	brk $00.b		; 00 00
 	brk $17.b		; 00 17
-	.db $F0, $F0		; F0 F0
+	.db $F0, $00		; F0 00
 	brk $F8.b		; 00 F8
-	brk $F8.b		; 00 F8
-	sei		; 78
-	jsr ($FC60.w,X)		; FC 60 FC
-	jsr ($0CFE.w,X)		; FC FE 0C
+	sed		; F8
+	sed		; F8
+	sed		; F8
+	jsr ($FCFC.w,X)		; FC FC FC
+	jsr ($FEFE.w,X)		; FC FE FE
 	inc $FFE8.w,X		; FE E8 FF
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
@@ -4725,193 +4789,215 @@
 	brk $00.b		; 00 00
 	eor $475747.l,X		; 5F 47 57 47
 	mvp $7C,$44		; 44 44 7C
-	jmp ($4438.w,X)		; 7C 38 44
-	sei		; 78
-	sty $00.b		; 84 00
-	jsr ($0000.w,X)		; FC 00 00
+	jmp ($4400.w,X)		; 7C 00 44
+	brk $84.b		; 00 84
+	brk $FC.b		; 00 FC
+	brk $00.b		; 00 00
 	eor [$38.b]		; 47 38
 	eor [$38.b]		; 47 38
 	mvp $7C,$38		; 44 38 7C
 	brk $00.b		; 00 00
+	sec		; 38
+	brk $78.b		; 00 78
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	brk $00.b		; 00 00
-	brk $F4.b		; 00 F4
-	sty $F4.b		; 84 F4
+	pea $F484.w		; F4 84 F4
 	cpy $44.b		; C4 44
 	mvp $3C,$3C		; 44 3C 3C
-	trb $1E22.w		; 1C 22 1E
-	and ($00.b,X)		; 21 00
-	and $840000.l,X		; 3F 00 00 84
-	sei		; 78
+	brk $22.b		; 00 22
+	brk $21.b		; 00 21
+	brk $3F.b		; 00 3F
+	brk $00.b		; 00 00
+	sty $78.b		; 84 78
 	cpy $38.b		; C4 38
 	mvp $3C,$38		; 44 38 3C
 	brk $00.b		; 00 00
+	trb $1E00.w		; 1C 00 1E
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	brk $00.b		; 00 00
+	brk $1F.b		; 00 1F
+	ora $0F0F0F.l		; 0F 0F 0F 0F
+	brk $07.b		; 00 07
+	ora $04.b,S		; 03 04
+	ora [$08.b]		; 07 08
 	brk $0F.b		; 00 0F
-	ora $0F0F0F.l,X		; 1F 0F 0F 0F
-	ora $000707.l		; 0F 07 07 00
+	brk $00.b		; 00 00
+	brk $1F.b		; 00 1F
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
 	ora [$00.b]		; 07 00
-	ora $000F00.l		; 0F 00 0F 00
-	brk $0F.b		; 00 0F
-	trb $0F.b		; 14 0F
-	ora [$0F.b]		; 07 0F
-	asl $0407.w		; 0E 07 04
 	brk $03.b		; 00 03
 	brk $07.b		; 00 07
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	.db $F0, $F8		; F0 F8
+	brk $F8.b		; 00 F8
 	.db $F0, $F8		; F0 F8
 	cpx #$F0.b		; E0 F0
-	cpx #$E0.b		; E0 E0
 	brk $E0.b		; 00 E0
-	brk $E0.b		; 00 E0
+	cpy #$20.b		; C0 20
+	cpy #$20.b		; C0 20
 	brk $E0.b		; 00 E0
 	brk $00.b		; 00 00
-	cpx #$58.b		; E0 58
-	cpx #$F8.b		; E0 F8
-	cpx #$50.b		; E0 50
-	cpx #$40.b		; E0 40
+	brk $F8.b		; 00 F8
+	brk $18.b		; 00 18
+	brk $10.b		; 00 10
+	cpx #$00.b		; E0 00
 	brk $C0.b		; 00 C0
 	brk $C0.b		; 00 C0
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	ora [$FF.b]		; 07 FF
-	ora [$FF.b]		; 07 FF
-	ora [$7F.b]		; 07 7F
-	brk $78.b		; 00 78
-	brk $30.b		; 00 30
+	tsa		; 3B
+	cmp [$3B.b]		; C7 3B
+	cmp [$3B.b]		; C7 3B
+	eor [$08.b]		; 47 08
+	.db $70, $00		; 70 00
+	.db $30, $00		; 30 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	brk $00.b		; 00 00
-	ora [$39.b]		; 07 39
-	ora [$3F.b]		; 07 3F
-	ora [$39.b]		; 07 39
+	brk $04.b		; 00 04
+	sec		; 38
+	tsb $38.b		; 04 38
+	tsb $38.b		; 04 38
 	brk $08.b		; 00 08
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	jsr ($F8E2.w,X)		; FC E2 F8
-	sbc $60FFF8.l,X		; FF F8 FF 60
-	adc $001F00.l,X		; 7F 00 1F 00
-	asl $00.b		; 06 00
-	brk $00.b		; 00 00
-	brk $FC.b		; 00 FC
-	bit $FEF8.w,X		; 3C F8 FE
-	sed		; F8
-	rol $60.b,X		; 36 60
-	rol $0600.w,X		; 3E 00 06
+	jsr ($F6E2.w,X)		; FC E2 F6
+	sbc $F9C6.w,Y		; F9 C6 F9
+	lsr $0661.w,X		; 5E 61 06
+	ora $0600.w,Y		; 19 00 06
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
+	trb $081C.w		; 1C 1C 08
+	asl $38.b		; 06 38
+	asl $20.b		; 06 20
+	asl $0600.w,X		; 1E 00 06
 	brk $00.b		; 00 00
-	ora $7F3F3F.l,X		; 1F 3F 3F 7F
-	ora $FF0FFF.l,X		; 1F FF 0F FF
-	brk $FC.b		; 00 FC
-	brk $7C.b		; 00 7C
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $20.b		; 00 20
+	ora $9F677F.l		; 0F 7F 67 9F
+	and [$CF.b],Y		; 37 CF
+	php		; 08
+	pea $7C00.w		; F4 00 7C
 	brk $18.b		; 00 18
 	brk $00.b		; 00 00
-	brk $3F.b		; 00 3F
-	and $7F1F04.l,X		; 3F 04 1F 7F
-	ora $080034.l		; 0F 34 00 08
+	ora $00303F.l,X		; 1F 3F 30 00
+	clc		; 18
+	rts		; 60
+
+	php		; 08
+	.db $30, $00		; 30 00
+	php		; 08
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	.db $F0, $F8		; F0 F8
-	jsr ($F8FC.w,X)		; FC FC F8
-	inc $FEF0.w,X		; FE F0 FE
-	brk $7E.b		; 00 7E
-	brk $FC.b		; 00 FC
-	brk $F8.b		; 00 F8
 	brk $00.b		; 00 00
-	brk $F8.b		; 00 F8
-	jsr ($F810.w,X)		; FC 10 F8
-	jsr ($1CF0.w,X)		; FC F0 1C
-	brk $3C.b		; 00 3C
+	sed		; F8
+	jsr ($FAF4.w,X)		; FC F4 FA
+	cpy $3CF2.w		; CC F2 3C
+	.db $42, $78		; 42 78
+	sty $00.b		; 84 00
+	sed		; F8
+	brk $00.b		; 00 00
+	sed		; F8
+	sed		; F8
+	tsb $00.b		; 04 00
+	php		; 08
+	tsb $30.b		; 04 30
+	tsb $3C00.w		; 0C 00 3C
 	brk $78.b		; 00 78
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	ora $0F0F1F.l,X		; 1F 1F 0F 0F
-	ora $07070F.l		; 0F 0F 07 07
-	brk $0F.b		; 00 0F
-	brk $1F.b		; 00 1F
-	brk $1F.b		; 00 1F
 	brk $00.b		; 00 00
-	brk $1F.b		; 00 1F
-	ora $0F0F02.l		; 0F 02 0F 0F
-	ora [$02.b]		; 07 02
-	brk $05.b		; 00 05
-	brk $0B.b		; 00 0B
+	ora $0F0F0F.l		; 0F 0F 0F 0F
+	brk $07.b		; 00 07
+	ora $0A.b		; 05 0A
+	phd		; 0B
+	trb $00.b		; 14 00
+	ora $1F0000.l,X		; 1F 00 00 1F
+	ora $000000.l,X		; 1F 00 00 00
+	brk $07.b		; 00 07
+	brk $00.b		; 00 00
+	ora $00.b		; 05 00
+	phd		; 0B
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	jsr ($F8FC.w,X)		; FC FC F8
+	brk $00.b		; 00 00
 	sed		; F8
 	sed		; F8
 	sed		; F8
-	.db $F0, $F0		; F0 F0
-	brk $F0.b		; 00 F0
-	brk $F0.b		; 00 F0
-	brk $F0.b		; 00 F0
-	brk $00.b		; 00 00
-	brk $FC.b		; 00 FC
 	sed		; F8
-	jsr $F8F8.w		; 20 F8 F8
-	.db $F0, $20		; F0 20
 	brk $F0.b		; 00 F0
-	brk $E0.b		; 00 E0
+	.db $F0, $00		; F0 00
+	cpx #$10.b		; E0 10
+	brk $F0.b		; 00 F0
 	brk $00.b		; 00 00
+	jsr ($00FC.w,X)		; FC FC 00
 	brk $00.b		; 00 00
-	and $FF1FFF.l,X		; 3F FF 1F FF
-	ora $FC0CFF.l,X		; 1F FF 0C FC
-	brk $78.b		; 00 78
+	brk $F0.b		; 00 F0
+	brk $00.b		; 00 00
+	.db $F0, $00		; F0 00
+	cpx #$00.b		; E0 00
+	brk $00.b		; 00 00
+	brk $5F.b		; 00 5F
+	lda $4FBF4F.l,X		; BF 4F BF 4F
+	lda $309C64.l,X		; BF 64 9C 30
+	pha		; 48
 	brk $30.b		; 00 30
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	and $1F1F08.l,X		; 3F 08 1F 1F
-	ora $080C08.l,X		; 1F 08 0C 08
-	brk $00.b		; 00 00
+	jsr $1040.w		; 20 40 10
+	rti		; 40
+
+	.db $10, $40		; 10 40
+	php		; 08
+	rts		; 60
+
+	brk $30.b		; 00 30
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	jsr ($FCFC.w,X)		; FC FC FC
-	inc $FFFC.w,X		; FE FC FF
-	cpy #$FF.b		; C0 FF
-	brk $1F.b		; 00 1F
-	brk $0F.b		; 00 0F
+	inc $FD82.w,X		; FE 82 FD
+	ldx $0EC1.w,Y		; BE C1 0E
+	ora ($06.b),Y		; 11 06
+	ora #$00.b		; 09 00
+	asl $00.b		; 06 00
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	brk $7C.b		; 00 7C
+	cop $40.b		; 02 40
+	rol $0E00.w,X		; 3E 00 0E
 	brk $06.b		; 00 06
 	brk $00.b		; 00 00
-	jsr ($FC40.w,X)		; FC 40 FC
-	jsr ($42FC.w,X)		; FC FC 42
-	cpy #$7E.b		; C0 7E
-	brk $0E.b		; 00 0E
-	brk $06.b		; 00 06
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	asl $1F4F.w		; 0E 4F 1F
-	eor $0CFF1E.l,X		; 5F 1E FF 0C
-	inc $7C00.w,X		; FE 00 7C
+	ora $FF3F5F.l,X		; 1F 5F 3F FF
+	ror $3C80.w,X		; 7E 80 3C
+	rti		; 40
+
 	brk $3C.b		; 00 3C
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	.db $30, $7F		; 30 7F
-	jsr $007F.w		; 20 7F 00
-	and $007E00.l,X		; 3F 00 7E 00
-	bit $0000.w,X		; 3C 00 00
+	adc $7F207F.l,X		; 7F 7F 20 7F
+	brk $00.b		; 00 00
+	brk $7E.b		; 00 7E
+	brk $3C.b		; 00 3C
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	brk $15.b		; 00 15
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
 	.db $10, $FB		; 10 FB
-	tsb $3CFE.w		; 0C FE 3C
-	ror $7C00.w,X		; 7E 00 7C
-	brk $7C.b		; 00 7C
+	inc $7EFE.w,X		; FE FE 7E
 	brk $7C.b		; 00 7C
 	brk $38.b		; 00 38
-	nop		; EA
-	sbc $00FF04.l,X		; FF 04 FF 00
-	inc $7E00.w,X		; FE 00 7E
+	mvp $44,$38		; 44 38 44
+	brk $38.b		; 00 38
+	sbc $FF04FF.l,X		; FF FF 04 FF
+	brk $00.b		; 00 00
+	brk $7E.b		; 00 7E
 	brk $7C.b		; 00 7C
 	brk $38.b		; 00 38
 	brk $38.b		; 00 38
@@ -4947,125 +5033,139 @@
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	sbc $FD02.w,X		; FD 02 FD
-	cop $3F.b		; 02 3F
-	and $430601.l,X		; 3F 01 06 43
-	bit $3F40.w,X		; 3C 40 3F
-	brk $3F.b		; 00 3F
-	.db $10, $0F		; 10 0F
-	brk $FD.b		; 00 FD
-	brk $FD.b		; 00 FD
-	and $04043F.l,X		; 3F 3F 04 04
-	jmp ($7B40.w,X)		; 7C 40 7B
+	ora $00.b,S		; 03 00
+	ora [$01.b]		; 07 01
+	ora [$03.b]		; 07 03
+	ora ($06.b,X)		; 01 06
+	eor $3C.b,S		; 43 3C
+	rti		; 40
+
+	and $103F00.l,X		; 3F 00 3F 10
+	ora $01FF00.l		; 0F 00 FF 01
+	sbc $043F03.l,X		; FF 03 3F 04
+	tsb $7C.b		; 04 7C
+	rti		; 40
+
+	tda		; 7B
 	rti		; 40
 
 	brk $00.b		; 00 00
-	ora $40BF10.l,X		; 1F 10 BF 40
-	lda $80FC40.l,X		; BF 40 FC 80
+	ora $00C010.l,X		; 1F 10 C0 00
+	cpx #$80.b		; E0 80
+	cpx #$C0.b		; E0 C0
 	brk $FC.b		; 00 FC
 	php		; 08
 	pea $F408.w		; F4 08 F4
 	brk $FC.b		; 00 FC
 	.db $10, $E8		; 10 E8
-	brk $BF.b		; 00 BF
-	brk $BF.b		; 00 BF
-	.db $80, $FC		; 80 FC
+	brk $FF.b		; 00 FF
+	.db $80, $FF		; 80 FF
+	cpy #$FC.b		; C0 FC
 	iny		; C8
 	iny		; C8
 	jmp.w [$9C0C]		; DC 0C 9C
 	trb $38F8.w		; 1C F8 38
 	.db $F0, $70		; F0 70
-	.db $30, $00		; 30 00
-	and $3D02.w,X		; 3D 02 3D
-	cop $3F.b		; 02 3F
-	and $430601.l,X		; 3F 01 06 43
-	bit $3F40.w,X		; 3C 40 3F
-	brk $3F.b		; 00 3F
-	brk $30.b		; 00 30
-	brk $3D.b		; 00 3D
-	brk $3D.b		; 00 3D
-	and $04043F.l,X		; 3F 3F 04 04
-	jmp ($7B40.w,X)		; 7C 40 7B
-	rti		; 40
-
 	brk $00.b		; 00 00
-	tsb $BC00.w		; 0C 00 BC
-	rti		; 40
-
-	ldy $8040.w,X		; BC 40 80
-	.db $80, $00		; 80 00
-	jsr ($F408.w,X)		; FC 08 F4
-	php		; 08
-	pea $FC00.w		; F4 00 FC
-	brk $0C.b		; 00 0C
-	brk $BC.b		; 00 BC
-	brk $BC.b		; 00 BC
-	.db $80, $FC		; 80 FC
-	iny		; C8
-	iny		; C8
-	jmp.w [$9C0C]		; DC 0C 9C
-	trb $38F8.w		; 1C F8 38
-	adc [$00.b]		; 67 00
-	sbc [$00.b],Y		; F7 00
-	sbc $66613F.l,X		; FF 3F 61 66
+	ora $00.b,S		; 03 00
+	ora $00.b,S		; 03 00
+	ora $01.b,S		; 03 01
+	ora ($06.b,X)		; 01 06
 	eor $3C.b,S		; 43 3C
 	rti		; 40
 
-	and $283F00.l,X		; 3F 00 3F 28
-	and [$60.b]		; 27 60
-	adc [$92.b]		; 67 92
-	sta $BFBF.w,Y		; 99 BF BF
-	stz $14.b		; 64 14
-	jmp ($7B40.w,X)		; 7C 40 7B
+	and $003F00.l,X		; 3F 00 3F 00
+	.db $30, $00		; 30 00
+	and $013F00.l,X		; 3F 00 3F 01
+	and $7C0404.l,X		; 3F 04 04 7C
+	rti		; 40
+
+	tda		; 7B
 	rti		; 40
 
 	brk $00.b		; 00 00
-	and $00F418.l		; 2F 18 F4 00
-	jsr ($FC00.w,X)		; FC 00 FC
-	.db $80, $00		; 80 00
-	jsr ($F408.w,X)		; FC 08 F4
+	brk $00.b		; 00 00
+	cpy #$00.b		; C0 00
+	cpy #$00.b		; C0 00
+	cpy #$80.b		; C0 80
+	brk $FC.b		; 00 FC
 	php		; 08
-	pea $FC00.w		; F4 00 FC
-	.db $10, $E8		; 10 E8
-	brk $F4.b		; 00 F4
+	pea $F408.w		; F4 08 F4
+	brk $FC.b		; 00 FC
+	brk $0C.b		; 00 0C
+	brk $FC.b		; 00 FC
 	brk $FC.b		; 00 FC
 	.db $80, $FC		; 80 FC
 	iny		; C8
 	iny		; C8
 	jmp.w [$9C0C]		; DC 0C 9C
 	trb $38F8.w		; 1C F8 38
+	adc $00.b,S		; 63 00
+	sta [$60.b],Y		; 97 60
+	sta $41.b,S		; 83 41
+	adc ($66.b,X)		; 61 66
+	eor $3C.b,S		; 43 3C
+	rti		; 40
+
+	and $283F00.l,X		; 3F 00 3F 28
+	and [$60.b]		; 27 60
+	adc [$F0.b]		; 67 F0
+	txy		; 9B
+	cmp ($BF.b,X)		; C1 BF
+	stz $14.b		; 64 14
+	jmp ($7B40.w,X)		; 7C 40 7B
+	rti		; 40
+
+	brk $00.b		; 00 00
+	and $00E018.l		; 2F 18 E0 00
+	cpx #$00.b		; E0 00
+	cpx #$C0.b		; E0 C0
+	brk $FC.b		; 00 FC
+	php		; 08
+	pea $F408.w		; F4 08 F4
+	brk $FC.b		; 00 FC
+	.db $10, $E8		; 10 E8
+	brk $F4.b		; 00 F4
+	brk $FC.b		; 00 FC
+	cpy #$FC.b		; C0 FC
+	iny		; C8
+	iny		; C8
+	jmp.w [$9C0C]		; DC 0C 9C
+	trb $38F8.w		; 1C F8 38
 	.db $F0, $70		; F0 70
-	and [$00.b]		; 27 00
-	and $3F3F00.l,X		; 3F 00 3F 3F
+	ora $00.b,S		; 03 00
+	ora $00.b,S		; 03 00
+	ora $01.b,S		; 03 01
 	ora ($06.b,X)		; 01 06
 	eor $3C.b,S		; 43 3C
 	.db $42, $3D		; 42 3D
 	brk $3F.b		; 00 3F
 	ora $270000.l		; 0F 00 00 27
 	brk $3F.b		; 00 3F
-	and $04043F.l,X		; 3F 3F 04 04
+	ora ($3F.b,X)		; 01 3F
+	tsb $04.b		; 04 04
 	jmp ($7940.w,X)		; 7C 40 79
 	rti		; 40
 
 	brk $00.b		; 00 00
 	brk $18.b		; 00 18
-	sbc ($00.b)		; F2 00
-	inc $FC00.w,X		; FE 00 FC
-	.db $80, $04		; 80 04
-	sed		; F8
-	tsb $1EF0.w		; 0C F0 1E
-	cpx #$1E.b		; E0 1E
-	cpx #$FC.b		; E0 FC
-	.db $80, $00		; 80 00
+	cpy #$00.b		; C0 00
+	cpy #$00.b		; C0 00
+	cpy #$80.b		; C0 80
+	brk $F8.b		; 00 F8
+	tsb $12F0.w		; 0C F0 12
+	cpx $EC12.w		; EC 12 EC
+	jsr ($0080.w,X)		; FC 80 00
 	sbc ($00.b)		; F2 00
 	inc $FC80.w,X		; FE 80 FC
 	cpy #$C6.b		; C0 C6
-	jmp.w [$921E]		; DC 1E 92
-	ora ($F2.b)		; 12 F2
+	jmp.w [$9E1E]		; DC 1E 9E
+	ora ($FE.b)		; 12 FE
 	and ($FC.b)		; 32 FC
-	jmp ($0031.w,X)		; 7C 31 00
-	and $003F00.l,X		; 3F 00 3F 00
-	and $06013F.l,X		; 3F 3F 01 06
+	jmp ($0000.w,X)		; 7C 00 00
+	brk $00.b		; 00 00
+	and $3F3F00.l,X		; 3F 00 3F 3F
+	ora ($06.b,X)		; 01 06
 	eor $3C.b,S		; 43 3C
 	rti		; 40
 
@@ -5079,13 +5179,14 @@
 	rti		; 40
 
 	brk $00.b		; 00 00
-	sty $FC00.w		; 8C 00 FC
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	cpy #$00.b		; C0 00
+	cpy #$80.b		; C0 80
 	brk $FC.b		; 00 FC
-	brk $80.b		; 00 80
-	.db $80, $00		; 80 00
-	jsr ($F408.w,X)		; FC 08 F4
 	php		; 08
-	pea $FC00.w		; F4 00 FC
+	pea $F408.w		; F4 08 F4
+	brk $FC.b		; 00 FC
 	brk $8C.b		; 00 8C
 	brk $FC.b		; 00 FC
 	brk $FC.b		; 00 FC
@@ -5094,25 +5195,29 @@
 	iny		; C8
 	jmp.w [$9C0C]		; DC 0C 9C
 	trb $38F8.w		; 1C F8 38
-	and $3F00.w,X		; 3D 00 3F
-	brk $3F.b		; 00 3F
-	and $430601.l,X		; 3F 01 06 43
-	bit $3F40.w,X		; 3C 40 3F
-	brk $3F.b		; 00 3F
-	php		; 08
+	ora ($00.b,X)		; 01 00
+	ora $00.b,S		; 03 00
+	ora $03.b,S		; 03 03
+	ora ($06.b,X)		; 01 06
+	eor $3C.b,S		; 43 3C
+	rti		; 40
+
+	and $083F00.l,X		; 3F 00 3F 08
 	ora [$00.b]		; 07 00
 	and $3F00.w,X		; 3D 00 3F
-	and $04043F.l,X		; 3F 3F 04 04
+	ora $3F.b,S		; 03 3F
+	tsb $04.b		; 04 04
 	jmp ($7B40.w,X)		; 7C 40 7B
 	rti		; 40
 
 	brk $00.b		; 00 00
-	ora $008C08.l		; 0F 08 8C 00
-	jsr ($8000.w,X)		; FC 00 80
+	ora $008008.l		; 0F 08 80 00
 	.db $80, $00		; 80 00
-	jsr ($F408.w,X)		; FC 08 F4
+	.db $80, $80		; 80 80
+	brk $FC.b		; 00 FC
 	php		; 08
-	pea $FC00.w		; F4 00 FC
+	pea $F408.w		; F4 08 F4
+	brk $FC.b		; 00 FC
 	.db $10, $E8		; 10 E8
 	brk $8C.b		; 00 8C
 	brk $FC.b		; 00 FC
@@ -5122,15 +5227,17 @@
 	jmp.w [$9C0C]		; DC 0C 9C
 	trb $38F8.w		; 1C F8 38
 	.db $F0, $70		; F0 70
-	and ($00.b,X)		; 21 00
-	and $003F00.l,X		; 3F 00 3F 00
-	and $06013F.l,X		; 3F 3F 01 06
+	brk $00.b		; 00 00
+	ora $00.b,S		; 03 00
+	ora $00.b,S		; 03 00
+	ora $03.b,S		; 03 03
+	ora ($06.b,X)		; 01 06
 	eor $3C.b,S		; 43 3C
 	rti		; 40
 
 	and $003F00.l,X		; 3F 00 3F 00
 	and ($00.b,X)		; 21 00
-	and $3F3F00.l,X		; 3F 00 3F 3F
+	and $033F00.l,X		; 3F 00 3F 03
 	and $7C0404.l,X		; 3F 04 04 7C
 	rti		; 40
 
@@ -5138,13 +5245,14 @@
 	rti		; 40
 
 	brk $00.b		; 00 00
-	sty $00.b		; 84 00
-	jsr ($FC00.w,X)		; FC 00 FC
-	brk $80.b		; 00 80
+	brk $00.b		; 00 00
 	.db $80, $00		; 80 00
-	jsr ($F408.w,X)		; FC 08 F4
+	.db $80, $00		; 80 00
+	.db $80, $80		; 80 80
+	brk $FC.b		; 00 FC
 	php		; 08
-	pea $FC00.w		; F4 00 FC
+	pea $F408.w		; F4 08 F4
+	brk $FC.b		; 00 FC
 	brk $84.b		; 00 84
 	brk $FC.b		; 00 FC
 	brk $FC.b		; 00 FC
@@ -5153,9 +5261,10 @@
 	iny		; C8
 	jmp.w [$9C0C]		; DC 0C 9C
 	trb $38F8.w		; 1C F8 38
-	and ($00.b,X)		; 21 00
-	and $003F00.l,X		; 3F 00 3F 00
-	and $06013F.l,X		; 3F 3F 01 06
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	and $3F3F00.l,X		; 3F 00 3F 3F
+	ora ($06.b,X)		; 01 06
 	eor $3C.b,S		; 43 3C
 	rti		; 40
 
@@ -5169,13 +5278,14 @@
 	rti		; 40
 
 	brk $00.b		; 00 00
-	sty $00.b		; 84 00
-	jsr ($FC00.w,X)		; FC 00 FC
-	brk $80.b		; 00 80
-	.db $80, $00		; 80 00
-	jsr ($F408.w,X)		; FC 08 F4
+	brk $00.b		; 00 00
+	brk $00.b		; 00 00
+	cpy #$00.b		; C0 00
+	cpy #$80.b		; C0 80
+	brk $FC.b		; 00 FC
 	php		; 08
-	pea $FC00.w		; F4 00 FC
+	pea $F408.w		; F4 08 F4
+	brk $FC.b		; 00 FC
 	brk $84.b		; 00 84
 	brk $FC.b		; 00 FC
 	brk $FC.b		; 00 FC
@@ -5185,34 +5295,33 @@
 	jmp.w [$9C0C]		; DC 0C 9C
 	trb $38F8.w		; 1C F8 38
 	ora $101F08.l		; 0F 08 1F 10
-	adc $1F7F00.l,X		; 7F 00 7F 1F
-	and $300F00.l,X		; 3F 00 0F 30
-	ora [$18.b]		; 07 18
+	eor $1F5F00.l,X		; 5F 00 5F 1F
+	and [$00.b]		; 27 00
+	ora $30.b,S		; 03 30
+	ora ($18.b,X)		; 01 18
 	brk $0E.b		; 00 0E
 	php		; 08
 	asl $10.b,X		; 16 10
-	and $5F5F40.l		; 2F 40 5F 5F
-	rti		; 40
+	and $5F7F40.l		; 2F 40 7F 5F
+	rts		; 60
 
-	.db $30, $27		; 30 27
-	brk $03.b		; 00 03
-	brk $01.b		; 00 01
-	brk $00.b		; 00 00
-	jsr ($EE28.w,X)		; FC 28 EE
-	.db $30, $FF		; 30 FF
-	brk $FF.b		; 00 FF
-	.db $F0, $FC		; F0 FC
-	cop $FC.b		; 02 FC
-	cop $3C.b		; 02 3C
+	jsr $003F.w		; 20 3F 00
+	ora $000700.l		; 0F 00 07 00
+	brk $FC.b		; 00 FC
+	plp		; 28
+	nop		; EA
+	bit $F1.b,X		; 34 F1
+	asl $FEF1.w		; 0E F1 FE
+	sed		; F8
+	cop $F8.b		; 02 F8
+	cop $20.b		; 02 20
 	cop $00.b		; 02 00
 	trb $542C.w		; 1C 2C 54
-	dec A		; 3A
-	dex		; CA
-	ora ($F1.b),Y		; 11 F1
-	sbc ($01.b),Y		; F1 01
-	brk $F8.b		; 00 F8
-	brk $F8.b		; 00 F8
-	.db $10, $20		; 10 20
+	rol $1FCA.w,X		; 3E CA 1F
+	sbc ($FF.b),Y		; F1 FF
+	ora ($00.b,X)		; 01 00
+	jsr ($FC00.w,X)		; FC 00 FC
+	brk $3C.b		; 00 3C
 	brk $00.b		; 00 00
 	php		; 08
 	ora [$03.b]		; 07 03
@@ -5220,7 +5329,7 @@
 	brk $0F.b		; 00 0F
 	brk $00.b		; 00 00
 	brk $07.b		; 00 07
-	brk $01.b		; 00 01
+	brk $00.b		; 00 00
 	cop $00.b		; 02 00
 	ora [$0F.b]		; 07 0F
 	php		; 08
@@ -5229,15 +5338,15 @@
 	brk $0F.b		; 00 0F
 	brk $0F.b		; 00 0F
 	brk $07.b		; 00 07
-	brk $00.b		; 00 00
+	brk $01.b		; 00 01
 	brk $00.b		; 00 00
 	.db $10, $E8		; 10 E8
 	cpy #$40.b		; C0 40
 	.db $F0, $50		; F0 50
 	.db $F0, $00		; F0 00
-	sei		; 78
-	brk $F8.b		; 00 F8
-	brk $D0.b		; 00 D0
+	php		; 08
+	.db $70, $C8		; 70 C8
+	.db $30, $10		; 30 10
 	jsr $E000.w		; 20 00 E0
 	.db $F0, $70		; F0 70
 	rti		; 40
@@ -5245,39 +5354,40 @@
 	.db $30, $50		; 30 50
 	tay		; A8
 	.db $70, $F8		; 70 F8
-	php		; 08
+	sei		; 78
 	dey		; 88
-	php		; 08
+	sec		; 38
 	iny		; C8
-	.db $10, $10		; 10 10
+	.db $10, $D0		; 10 D0
 	brk $00.b		; 00 00
 	ora $020F00.l		; 0F 00 0F 02
-	ora $807F60.l,X		; 1F 60 7F 80
-	.db $30, $C0		; 30 C0
-	ora $601960.l,X		; 1F 60 19 60
+	ora $800F60.l,X		; 1F 60 0F 80
+	brk $C0.b		; 00 C0
+	ora $600960.l		; 0F 60 09 60
 	brk $30.b		; 00 30
 	brk $1C.b		; 00 1C
 	cop $0D.b		; 02 0D
 	brk $1F.b		; 00 1F
-	brk $0F.b		; 00 0F
-	brk $0F.b		; 00 0F
-	brk $0F.b		; 00 0F
-	brk $09.b		; 00 09
+	brk $7F.b		; 00 7F
+	brk $3F.b		; 00 3F
+	brk $1F.b		; 00 1F
+	brk $19.b		; 00 19
 	brk $00.b		; 00 00
 	sed		; F8
 	php		; 08
 	.db $F0, $30		; F0 30
-	sbc $00EF20.l		; EF 20 EF 00
+	sbc ($2E.b,X)		; E1 2E
+	sbc #$06.b		; E9 06
 	asl $00.b		; 06 00
-	inc $F601.w,X		; FE 01 F6
-	ora #$70.b		; 09 70
-	asl $08.b		; 06 08
+	.db $F0, $01		; F0 01
+	.db $F0, $09		; F0 09
+	.db $70, $06		; 70 06
+	php		; 08
 	stz $30.b,X		; 74 30
-	dec $D121.w		; CE 21 D1
-	ora #$F9.b		; 09 F9
-	asl $FE.b		; 06 FE
-	brk $F0.b		; 00 F0
-	brk $F0.b		; 00 F0
+	dec $D12F.w		; CE 2F D1
+	ora $FE06F9.l		; 0F F9 06 FE
+	brk $FE.b		; 00 FE
+	brk $F6.b		; 00 F6
 	brk $70.b		; 00 70
 	ora [$07.b]		; 07 07
 	brk $00.b		; 00 00
@@ -5295,107 +5405,105 @@
 	brk $01.b		; 00 01
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
-	sei		; 78
-	brk $78.b		; 00 78
-	brk $F8.b		; 00 F8
-	tsb $F8.b		; 04 F8
+	php		; 08
+	.db $70, $08		; 70 08
+	.db $70, $F8		; 70 F8
+	tsb $C0.b		; 04 C0
 	tsb $00.b		; 04 00
 	sec		; 38
 	cpx #$00.b		; E0 00
-	cpx #$10.b		; E0 10
+	brk $10.b		; 00 10
 	brk $F0.b		; 00 F0
-	php		; 08
+	sei		; 78
 	dey		; 88
-	php		; 08
+	sei		; 78
 	dey		; 88
 	sei		; 78
 	sed		; F8
-	brk $C0.b		; 00 C0
+	brk $F8.b		; 00 F8
 	brk $C0.b		; 00 C0
 	brk $E0.b		; 00 E0
-	brk $00.b		; 00 00
+	brk $E0.b		; 00 E0
 	brk $00.b		; 00 00
 	php		; 08
 	ora [$03.b]		; 07 03
 	cop $07.b		; 02 07
 	brk $0B.b		; 00 0B
-	trb $2A15.w		; 1C 15 2A
-	asl $29.b,X		; 16 29
-	asl A		; 0A
+	trb $2A01.w		; 1C 01 2A
+	brk $29.b		; 00 29
+	brk $15.b		; 00 15
+	brk $0F.b		; 00 0F
+	ora $040208.l		; 0F 08 02 04
+	brk $0F.b		; 00 0F
+	php		; 08
+	ora $00.b,S		; 03 00
 	ora $00.b,X		; 15 00
-	ora $02080F.l		; 0F 0F 08 02
-	tsb $00.b		; 04 00
-	ora $000308.l		; 0F 08 03 00
-	ora ($00.b,X)		; 01 00
+	asl $00.b,X		; 16 00
+	asl A		; 0A
 	brk $00.b		; 00 00
-	brk $00.b		; 00 00
-	brk $10.b		; 00 10
-	inx		; E8
+	.db $10, $E8		; 10 E8
 	.db $F0, $70		; F0 70
 	sed		; F8
 	php		; 08
-	cpx #$00.b		; E0 00
-	sed		; F8
-	brk $70.b		; 00 70
+	.db $80, $60		; 80 60
+	dey		; 88
+	.db $70, $70		; 70 70
 	brk $F0.b		; 00 F0
 	brk $E0.b		; 00 E0
 	brk $F0.b		; 00 F0
 	.db $70, $70		; 70 70
 	php		; 08
 	pla		; 68
-	pea $9C80.w		; F4 80 9C
-	dey		; 88
+	pea $9CE0.w		; F4 E0 9C
+	sed		; F8
 	dey		; 88
 	.db $70, $F8		; 70 F8
 	brk $F0.b		; 00 F0
 	brk $E0.b		; 00 E0
-	and $7B00.w,Y		; 39 00 7B
-	ora $7A.b,S		; 03 7A
-	cop $39.b		; 02 39
-	brk $1C.b		; 00 1C
-	jsr $300F.w		; 20 0F 30
-	ora [$18.b]		; 07 18
+	and $4300.w,Y		; 39 00 43
+	tsa		; 3B
+	.db $42, $3A		; 42 3A
+	and $0000.w,Y		; 39 00 00
+	jsr $3001.w		; 20 01 30
+	ora ($18.b,X)		; 01 18
 	brk $0E.b		; 00 0E
 	sec		; 38
-	rol $4443.w,X		; 3E 43 44
-	.db $42, $45		; 42 45
-	sec		; 38
-	and $000300.l,X		; 3F 00 03 00
-	ora ($00.b,X)		; 01 00
-	ora ($00.b,X)		; 01 00
+	rol $447B.w,X		; 3E 7B 44
+	ply		; 7A
+	eor $38.b		; 45 38
+	and $001F00.l,X		; 3F 00 1F 00
+	ora $000700.l		; 0F 00 07 00
 	brk $C0.b		; 00 C0
 	brk $E0.b		; 00 E0
 	jsr $0018.w		; 20 18 00
 	sed		; F8
-	tsb $04.b		; 04 04
-	cop $0C.b		; 02 0C
-	cop $3C.b		; 02 3C
+	tsb $00.b		; 04 00
+	cop $00.b		; 02 00
+	cop $20.b		; 02 20
 	cop $00.b		; 02 00
 	bit $3800.w,X		; 3C 00 38
 	jsr $00D8.w		; 20 D8 00
 	sed		; F8
 	brk $F8.b		; 00 F8
-	brk $F8.b		; 00 F8
-	brk $F0.b		; 00 F0
-	brk $20.b		; 00 20
+	brk $FC.b		; 00 FC
+	brk $FC.b		; 00 FC
+	brk $3C.b		; 00 3C
 	brk $00.b		; 00 00
 	php		; 08
 	ora [$3F.b]		; 07 3F
-	brk $7F.b		; 00 7F
-	ora ($7F.b,X)		; 01 7F
-	brk $3C.b		; 00 3C
-	brk $0F.b		; 00 0F
-	brk $03.b		; 00 03
+	brk $47.b		; 00 47
+	and $3847.w,Y		; 39 47 38
+	bit $0F00.w,X		; 3C 00 0F
+	brk $00.b		; 00 00
 	tsb $00.b		; 04 00
 	ora [$0F.b]		; 07 0F
 	php		; 08
 	sec		; 38
-	rol $4641.w,X		; 3E 41 46
-	rti		; 40
-
+	rol $4679.w,X		; 3E 79 46
+	sei		; 78
 	eor [$38.b]		; 47 38
 	and $000F00.l,X		; 3F 00 0F 00
-	brk $00.b		; 00 00
+	ora $00.b,S		; 03 00
 	brk $10.b		; 00 10
 	inx		; E8
 	sed		; F8
@@ -5403,7 +5511,7 @@
 	brk $F8.b		; 00 F8
 	brk $00.b		; 00 00
 	brk $F8.b		; 00 F8
-	brk $E0.b		; 00 E0
+	brk $00.b		; 00 00
 	.db $10, $00		; 10 00
 	.db $F0, $F0		; F0 F0
 	.db $70, $00		; 70 00
@@ -5412,40 +5520,39 @@
 	brk $F8.b		; 00 F8
 	brk $F8.b		; 00 F8
 	brk $F8.b		; 00 F8
-	brk $00.b		; 00 00
+	brk $E0.b		; 00 E0
 	brk $00.b		; 00 00
 	php		; 08
 	ora [$FF.b]		; 07 FF
-	brk $FE.b		; 00 FE
-	brk $7F.b		; 00 7F
-	brk $30.b		; 00 30
+	brk $8E.b		; 00 8E
+	.db $70, $4F		; 70 4F
+	.db $30, $30		; 30 30
 	brk $07.b		; 00 07
 	brk $03.b		; 00 03
 	brk $00.b		; 00 00
 	brk $0F.b		; 00 0F
 	php		; 08
 	.db $F0, $FC		; F0 FC
-	.db $80, $8F		; 80 8F
-	rti		; 40
-
-	eor $003F30.l		; 4F 30 3F 00
-	ora [$00.b]		; 07 00
-	ora $00.b,S		; 03 00
-	brk $10.b		; 00 10
-	inx		; E8
+	.db $F0, $8F		; F0 8F
+	.db $70, $4F		; 70 4F
+	.db $30, $3F		; 30 3F
+	brk $07.b		; 00 07
+	brk $03.b		; 00 03
+	brk $00.b		; 00 00
+	.db $10, $E8		; 10 E8
 	cpx #$10.b		; E0 10
 	sed		; F8
-	tsb $FC.b		; 04 FC
-	cop $06.b		; 02 06
-	ora ($F8.b,X)		; 01 F8
+	tsb $F8.b		; 04 F8
+	asl $00.b		; 06 00
+	ora [$F8.b]		; 07 F8
 	ora [$F0.b]		; 07 F0
 	brk $00.b		; 00 00
 	brk $F0.b		; 00 F0
 	.db $70, $10		; 70 10
 	.db $70, $00		; 70 00
 	sed		; F8
-	brk $F8.b		; 00 F8
-	brk $F8.b		; 00 F8
+	tsb $F8.b		; 04 F8
+	asl $F8.b		; 06 F8
 	brk $F8.b		; 00 F8
 	brk $F0.b		; 00 F0
 	brk $00.b		; 00 00
