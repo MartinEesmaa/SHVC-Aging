@@ -1340,23 +1340,23 @@
 	brk $7C.b		; 00 7C
 	brk $00.b		; 00 00
 	brk $44.b		; 00 44
-	brk $00.b		; 00 00
 	brk $38.b		; 00 38
 	brk $44.b		; 00 44
+	brk $82.b		; 00 82
 	brk $82.b		; 00 82
 	brk $FE.b		; 00 FE
 	brk $82.b		; 00 82
 	brk $00.b		; 00 00
-	brk $44.b		; 00 44
-	brk $00.b		; 00 00
-	brk $7C.b		; 00 7C
-	brk $82.b		; 00 82
-	brk $82.b		; 00 82
 	brk $82.b		; 00 82
 	brk $7C.b		; 00 7C
+	brk $82.b		; 00 82
+	brk $82.b		; 00 82
+	brk $82.b		; 00 82
+	brk $82.b		; 00 82
+	brk $7C.b		; 00 7C
 	brk $00.b		; 00 00
-	brk $24.b		; 00 24
-	brk $00.b		; 00 00
+	brk $28.b		; 00 28
+	brk $82.b		; 00 82
 	brk $82.b		; 00 82
 	brk $82.b		; 00 82
 	brk $82.b		; 00 82
@@ -1365,11 +1365,11 @@
 	brk $00.b		; 00 00
 	brk $28.b		; 00 28
 	brk $10.b		; 00 10
-	brk $00.b		; 00 00
-	brk $FC.b		; 00 FC
-	brk $10.b		; 00 10
-	brk $20.b		; 00 20
-	brk $FC.b		; 00 FC
+	brk $FE.b		; 00 FE
+	brk $18.b		; 00 18
+	brk $30.b		; 00 30
+	brk $60.b		; 00 60
+	brk $FE.b		; 00 FE
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
 	brk $00.b		; 00 00
