@@ -16,11 +16,19 @@ Branch source code of eestikeel-test: [here](https://github.com/MartinEesmaa/SHV
 
 ### Playable via online and sample video for new mod
 
-Online via itch.io and YouTube video of heyarnold-mod-v1.00.1 is here:
+**Online via itch.io and YouTube video of heyarnold-mod-v1.00.1 is here:**
 
 Animation play via online: https://martineesmaa.itch.io/snsp-testsnes-hamod
 
 Video: https://www.youtube.com/watch?v=vSaBK-nt2PM
+
+**Eesti versioon/Estonian version 1.00:**
+
+itch.io animatsioon test/animation test & YouTube video:
+
+https://martineesmaa.itch.io/snes-testpro-eesti
+
+https://www.youtube.com/watch?v=sVm776JAh2U
 
 Mod folder is available on master branch:
 
