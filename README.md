@@ -25,11 +25,9 @@ Video: https://www.youtube.com/watch?v=vSaBK-nt2PM
 Mod folder is available on master branch:
 
 ```
-SHVC-AGING-HA.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa (taken original)
-SHVC-AGING-HA-decompiled.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa (decompiled to mess assembly, then recompiled)
+SHVC-AGING-HA.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa
+SHVC-AGING-EESTI.sfc - Eesti versioon / Estonian version EEV1.00 (Martin Eesmaa)
 ```
-
-If you're not sure you can go pick normal modded ROM without `-decompiled` surfix name, but it's always working okay.
 
 ## Sample screenshots
 
