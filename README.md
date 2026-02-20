@@ -68,6 +68,7 @@ snes9x, bsnes, Higan, Ares, Mesen-S, jgenesis, LakeSnes and ChibiSNES were all t
 Emulators | Tests
 --- | --- |
 ZSNES v1.51 | ❌ (HV Timer only)
+SNES96 DOS | ❌ (DMA Register, VRAM Count, FIELD Flag, VH flag, OBJ L OVER)
 SNES9X DOS | ❌ (DMA Register, FIELD Flag, OBJ L OVER only, including APU sometimes)
 SNES9X 2002 | ❌ (FIELD Flag, OBJ L OVER and APU only)
 SNES9X 2005 | ❌ (APU only)
