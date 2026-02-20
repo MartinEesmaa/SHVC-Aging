@@ -61,12 +61,17 @@ Tile set debug viewer example of my mod running on Mesen2:
 
 Used all latest versions of SNES emulators follows:
 
-snes9x, bsnes, Higan, Ares, Mesen-S, jgenesis, LakeSnes and ChibiSNES were all tests successfully to start aging test.
+snes9x, bsnes, bsnes-hd, Higan, Ares, Mesen-S, Mesen2, jgenesis, LakeSnes, ChibiSNES, uosnes, byuu, lsnes, kindred and No$sns were all tests successfully to start aging test.
 
 ### Failed tests
 
 Emulators | Tests
 --- | --- |
+CHAMPI v1.00 | ❌ (OAM, FIELD/VH flag, OBJ L OVER, APU)
+ESNES DOS | ❌ (DMA Register, HV Timer, 224/239 mode, FIELD/VH flag, OBJ L OVER, APU)
+NLKSNES | ❌ (from DMA to APU, 8 tests failed total)
+SNESGT | ❌ (APU only)
+Super Sleuth | ❌ (APU only)
 ZSNES v1.51 | ❌ (HV Timer only)
 SNES96 DOS | ❌ (DMA Register, VRAM Count, FIELD Flag, VH flag, OBJ L OVER)
 SNES9X DOS | ❌ (DMA Register, FIELD Flag, OBJ L OVER only, including APU sometimes)
