@@ -4,42 +4,42 @@ Please note that this is for archival purposes, educational and other purposes o
 
 It can emulate ROM decompiled, including original to the SNES emulators, others & real hardwares.
 
-### Modded ROM based
+## Modded ROM based
 
 To see my modded roms, here they are:
 
-Branch source code of heyarnold-mod-v1.00: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00)
+Branch source code of heyarnold-mod-v1.00: [link here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00)
 
-Branch source code of heyarnold-mod-v1.00.1: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00.1)
+Branch source code of heyarnold-mod-v1.00.1: [link here](https://github.com/MartinEesmaa/SHVC-Aging/tree/heyarnold-mod-v1.00.1)
 
-Branch source code of eestikeel-test: [here](https://github.com/MartinEesmaa/SHVC-Aging/tree/eestikeel-test)
+Branch source code of eestikeel-test: [link here](https://github.com/MartinEesmaa/SHVC-Aging/tree/eestikeel-test)
 
 ### Playable via online and sample video for new mod
 
 **Online via itch.io and YouTube video of heyarnold-mod-v1.00.1 is here:**
 
-Animation play via online: https://martineesmaa.itch.io/snsp-testsnes-hamod
+Animation play via online: <https://martineesmaa.itch.io/snsp-testsnes-hamod>
 
-Video: https://www.youtube.com/watch?v=vSaBK-nt2PM
+Video: <https://www.youtube.com/watch?v=vSaBK-nt2PM>
 
 **Eesti versioon/Estonian version 1.00:**
 
 itch.io animatsioon test/animation test & YouTube video:
 
-https://martineesmaa.itch.io/snes-testpro-eesti
+<https://martineesmaa.itch.io/snes-testpro-eesti>
 
-https://www.youtube.com/watch?v=sVm776JAh2U
+<https://www.youtube.com/watch?v=sVm776JAh2U>
 
 Mod folder is available on master branch:
 
-```
+```text
 SHVC-AGING-HA.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa
 SHVC-AGING-EESTI.sfc - Eesti versioon / Estonian version EEV1.00 (Martin Eesmaa)
 ```
 
 ## Sample screenshots
 
-![](sampleee.png)
+![sampleee](sampleee.png)
 
 Here is my Estonian dub mod ROM with replacements of sprites, texts and more.
 
@@ -47,7 +47,7 @@ Here is my Estonian dub mod ROM with replacements of sprites, texts and more.
 
 ***This screenshot was on branch source code of eestikeel-test with bsnes HD and Widescreen Hack.***
 
-![](sampleha.png)
+![sampleha](sampleha.png)
 
 **Credit: welovebirdmom (original, wplace) & Martin Eesmaa (wplace, SNES) [2025]**
 
@@ -55,7 +55,7 @@ Here is my Estonian dub mod ROM with replacements of sprites, texts and more.
 
 Tile set debug viewer example of my mod running on Mesen2:
 
-![](tilesets.png)
+![tilesets](tilesets.png)
 
 ## Tests
 
@@ -65,28 +65,29 @@ snes9x, bsnes, bsnes-hd, Higan, Ares, Mesen-S, Mesen2, jgenesis, LakeSnes, Chibi
 
 ### Failed tests
 
-Emulators | Tests
---- | --- |
-CHAMPI v1.00 | ❌ (OAM, FIELD/VH flag, OBJ L OVER, APU)
-ESNES DOS | ❌ (DMA Register, HV Timer, 224/239 mode, FIELD/VH flag, OBJ L OVER, APU)
-NLKSNES | ❌ (from DMA to APU, 8 tests failed total)
-SNESGT | ❌ (APU only)
-Super Sleuth | ❌ (APU only)
-ZSNES v1.51 | ❌ (HV Timer only)
-SNES96 DOS | ❌ (DMA Register, VRAM Count, FIELD Flag, VH flag, OBJ L OVER)
-SNES9X DOS | ❌ (DMA Register, FIELD Flag, OBJ L OVER only, including APU sometimes)
-SNES9X 2002 | ❌ (FIELD Flag, OBJ L OVER and APU only)
-SNES9X 2005 | ❌ (APU only)
-ZSNES DOS | ❌ (HV Timer, FIELD Flag, OBJ L OVER and APU only)
-SMEM (via XNes) | ❌ (from VRAM High to FIELD Flag (exclude MPY 8x8, DEV 16/8 & DMA), the rest last ones are failed)
-Beetle Supafaust | ❌ (OBJ L OVER only)
-SnesJs | ❌ (APU only)
-KSNES (C#) | ❌ (DMA only, the rest after DMA are all unknown errors and some graphics bug)
-SNEeSe | ❌ (OBJ L OVER only)
-Siena (Rust) | ❌ (224/239 mode only)
-FranLMSP's SNES (Rust) | ❌ (loads ROM, but no sign screen)
-SNES.net (gdkchan's VB.NET) | ❌ (224/239 mode and APU only)
-MAME SNES | ❌ (OAM only)
+| Emulators | Tests |
+| --- | --- |
+| Silhouette v1.0 | ❌ (OAM, DMA, FIELD Flag, VH Flag, OBJ L OVER, APU) |
+| CHAMPI v1.00 | ❌ (OAM, FIELD/VH flag, OBJ L OVER, APU) |
+| ESNES DOS | ❌ (DMA Register, HV Timer, 224/239 mode, FIELD/VH flag, OBJ L OVER, APU) |
+| NLKSNES | ❌ (from DMA to APU, 8 tests failed total) |
+| SNESGT | ❌ (APU only) |
+| Super Sleuth | ❌ (APU only) |
+| ZSNES v1.51 | ❌ (HV Timer only) |
+| SNES96 DOS | ❌ (DMA Register, VRAM Count, FIELD Flag, VH flag, OBJ L OVER) |
+| SNES9X DOS | ❌ (DMA Register, FIELD Flag, OBJ L OVER only, including APU sometimes) |
+| SNES9X 2002 | ❌ (FIELD Flag, OBJ L OVER and APU only) |
+| SNES9X 2005 | ❌ (APU only) |
+| ZSNES DOS | ❌ (HV Timer, FIELD Flag, OBJ L OVER and APU only) |
+| SMEM (via XNes) | ❌ (from VRAM High to FIELD Flag (exclude MPY 8x8, DEV 16/8 & DMA), the rest last ones are failed) |
+| Beetle Supafaust | ❌ (OBJ L OVER only) |
+| SnesJs | ❌ (APU only) |
+| KSNES (C#) | ❌ (DMA only, the rest after DMA are all unknown errors and some graphics bug) |
+| SNEeSe | ❌ (OBJ L OVER only) |
+| Siena (Rust) | ❌ (224/239 mode only) |
+| FranLMSP's SNES (Rust) | ❌ (loads ROM, but no sign screen) |
+| SNES.net (gdkchan's VB.NET) | ❌ (224/239 mode and APU only) |
+| MAME SNES | ❌ (OAM only) |
 
 ## Requirement
 
@@ -102,7 +103,7 @@ Decompiled MD5 sum of SHVC-AGING V1.00 SNES LoRom file: `59029b262fde1c5d83a7f91
 
 If you want to recompile again, first clean and then remake it again:
 
-```
+```bash
 make clean
 make
 ```
@@ -111,13 +112,13 @@ make
 
 Precopy of original SNES ROM of Aging Test Cartridge is available on OBIN folder.
 
-Taken from Internet Archive: https://archive.org/details/super-famicom-aging-program-ver-1-00
+Taken from Internet Archive: <https://archive.org/details/super-famicom-aging-program-ver-1-00>
 
 Used to decompile using [snes2asm](https://github.com/nathancassano/snes2asm) python wrapper.
 
 Command:
 
-```
+```bash
 snes2asm -nl -o SHVC SHVC-AGING.sfc
 ```
 
