@@ -14,6 +14,8 @@ Branch source code of heyarnold-mod-v1.00.1: [link here](https://github.com/Mart
 
 Branch source code of eestikeel-test: [link here](https://github.com/MartinEesmaa/SHVC-Aging/tree/eestikeel-test)
 
+Source assets of SANE (Super Aging Next Edition) version 1.01: [link here](SANEv101)
+
 ### Playable via online and sample video for new mod
 
 **Online via itch.io and YouTube video of heyarnold-mod-v1.00.1 is here:**
@@ -35,6 +37,7 @@ Mod folder is available on master branch:
 ```text
 SHVC-AGING-HA.sfc - Fan-based modded of Hey Arnold by Martin Eesmaa
 SHVC-AGING-EESTI.sfc - Eesti versioon / Estonian version EEV1.00 (Martin Eesmaa)
+SHVC-AGING-SANE.sfc - Super Aging Next Edition v1.01 (Martin Eesmaa)
 ```
 
 ## Sample screenshots
